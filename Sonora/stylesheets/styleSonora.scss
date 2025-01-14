@@ -1,0 +1,60 @@
+//set parallax img
+.parallax::before {
+      
+     
+  background-image: url("images/LogoSign.jpg");
+}
+///Page specific block background sizing//
+.GalWrapper {
+
+  .Galblock {
+    background-size: 100%;
+  }
+  .Galblock:hover {
+    background-size: 110%;
+  }
+
+
+///BACKGROUND IMAGE SETTING FOR GAL///
+  .Gal1 {
+    background-image: url("images/Stationary.jpg");
+   
+  }
+  .Gal2 {
+    background-image: url("images/BCard.jpg");
+    
+  }
+  .Gal3 {
+    background-image: url("images/Mock1.jpg");
+
+ 
+  }
+  .Gal4 {
+    background-image: url("images/Mock2.jpg");
+
+  }
+  .Gal5 {
+    background-image: url("images/Mock3.jpg");
+
+  }
+
+  .Gal6 {
+    background-image: url("images/Mock4.jpg");
+
+  }
+
+  .Gal7 {
+    background-image: url("images/Mock5.jpg");
+  
+  }
+  .Gal10{
+    background-image: url("/WD-40/stylesheets/images/MagMock.jpg");
+  }
+  .Gal11{
+    background-image: url("/Posters/stylesheets/images/DivMock3.jpg");
+   
+  }
+     
+}
+
+

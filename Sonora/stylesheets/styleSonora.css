@@ -1,0 +1,37 @@
+.parallax::before {
+  background-image: url("images/LogoSign.jpg");
+}
+
+.GalWrapper .Galblock {
+  background-size: 100%;
+}
+.GalWrapper .Galblock:hover {
+  background-size: 110%;
+}
+.GalWrapper .Gal1 {
+  background-image: url("images/Stationary.jpg");
+}
+.GalWrapper .Gal2 {
+  background-image: url("images/BCard.jpg");
+}
+.GalWrapper .Gal3 {
+  background-image: url("images/Mock1.jpg");
+}
+.GalWrapper .Gal4 {
+  background-image: url("images/Mock2.jpg");
+}
+.GalWrapper .Gal5 {
+  background-image: url("images/Mock3.jpg");
+}
+.GalWrapper .Gal6 {
+  background-image: url("images/Mock4.jpg");
+}
+.GalWrapper .Gal7 {
+  background-image: url("images/Mock5.jpg");
+}
+.GalWrapper .Gal10 {
+  background-image: url("/WD-40/stylesheets/images/MagMock.jpg");
+}
+.GalWrapper .Gal11 {
+  background-image: url("/Posters/stylesheets/images/DivMock3.jpg");
+}/*# sourceMappingURL=styleSonora.css.map */
