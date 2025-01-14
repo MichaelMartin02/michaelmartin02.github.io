@@ -1,0 +1,91 @@
+//set parallax img
+$lightest : #FFFBEA;
+.parallax::before {
+      
+     
+  background-image: url("images/DivMock3.jpg");
+}
+///Page specific block background sizing//
+.GalWrapper {
+
+  .Galblock {
+    background-size: 100%;
+  }
+  .Galblock:hover {
+    background-size: 110%;
+  }
+.Half{
+  aspect-ratio: 1/1.4;
+}
+.Link{
+  H1{
+    color:$lightest;
+  }
+}
+
+///BACKGROUND IMAGE SETTING FOR GAL///
+  .Gal1 {
+    background-image: url("images/CompPosterFlat.png");
+   background-repeat: no-repeat;
+   
+  }
+  .Gal2 {
+    background-image: url("images/CompMock1.jpg");
+    background-repeat: no-repeat;
+    background-size: 210%;
+    &:hover{
+      background-size: 220%;
+    }
+  }
+  .Gal3 {
+    background-image: url("images/CompMock2.jpg");
+
+    height: 40%;
+  }
+  .Gal4 {
+    background-image: url("images/PosterGigClip.jpg");
+
+    background-position: center-bottom;
+   
+  }
+  .Gal5 {
+    background-image: url("images/PosterSlouch.jpg");
+    background-size: 150%;
+  }
+  .Gal5:hover{
+    background-size: 160%;
+  }
+  .Gal6 {
+    background-image: url("images/Band.jpg");
+
+  }
+
+  .Gal7 {
+    background-image: url("images/Tote.jpg");
+  
+  }
+
+  .Gal8 {
+    background-image: url("images/VIP.jpg");
+  }
+
+  // .Gal9 {
+  //   background-image: url("images/JunkFlat.jpg");
+  // }
+  // .Gal12{
+  //   background-image: url("images/LawyerMock.jpg");
+  // }
+  // .Gal13{
+  //   background-image: url("images/JunkMock.jpg");
+  // }
+  .Gal10{
+    background-image: url("/Sonora/stylesheets/images/LogoSign.jpg");
+  }
+  .Gal11{
+    background-image: url("/MetGala/stylesheets/images/RecordOnPlayerMock.jpg");
+   
+  }
+     
+}
+
+

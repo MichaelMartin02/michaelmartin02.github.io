@@ -1,0 +1,58 @@
+.parallax::before {
+  background-image: url("images/DivMock3.jpg");
+}
+
+.GalWrapper .Galblock {
+  background-size: 100%;
+}
+.GalWrapper .Galblock:hover {
+  background-size: 110%;
+}
+.GalWrapper .Half {
+  aspect-ratio: 1/1.4;
+}
+.GalWrapper .Link H1 {
+  color: #FFFBEA;
+}
+.GalWrapper .Gal1 {
+  background-image: url("images/CompPosterFlat.png");
+  background-repeat: no-repeat;
+}
+.GalWrapper .Gal2 {
+  background-image: url("images/CompMock1.jpg");
+  background-repeat: no-repeat;
+  background-size: 210%;
+}
+.GalWrapper .Gal2:hover {
+  background-size: 220%;
+}
+.GalWrapper .Gal3 {
+  background-image: url("images/CompMock2.jpg");
+  height: 40%;
+}
+.GalWrapper .Gal4 {
+  background-image: url("images/PosterGigClip.jpg");
+  background-position: center-bottom;
+}
+.GalWrapper .Gal5 {
+  background-image: url("images/PosterSlouch.jpg");
+  background-size: 150%;
+}
+.GalWrapper .Gal5:hover {
+  background-size: 160%;
+}
+.GalWrapper .Gal6 {
+  background-image: url("images/Band.jpg");
+}
+.GalWrapper .Gal7 {
+  background-image: url("images/Tote.jpg");
+}
+.GalWrapper .Gal8 {
+  background-image: url("images/VIP.jpg");
+}
+.GalWrapper .Gal10 {
+  background-image: url("/Sonora/stylesheets/images/LogoSign.jpg");
+}
+.GalWrapper .Gal11 {
+  background-image: url("/MetGala/stylesheets/images/RecordOnPlayerMock.jpg");
+}/*# sourceMappingURL=stylePoster.css.map */
