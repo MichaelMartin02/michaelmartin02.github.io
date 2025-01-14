@@ -1,0 +1,165 @@
+/*General for all */
+* {
+  cursor: none;
+}
+
+html {
+  height: 100%;
+}
+
+body {
+  font-size: 100%;
+  overflow-x: hidden;
+  height: 100%;
+  background-color: #1d3557;
+}
+
+img {
+  max-width: 100%;
+}
+
+/****cursor***/
+.cursor {
+  position: fixed;
+  width: 2rem;
+  height: 2rem;
+  background: #e63946;
+  margin: -10px 0 0 -10px;
+  border-radius: 50%;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
+  pointer-events: none;
+  z-index: 1000000000000000000000;
+  mix-blend-mode: multiply;
+}
+
+.leftBar {
+  width: 7%;
+  position: absolute;
+  height: 100%;
+  z-index: 100;
+}
+
+.parallax::before {
+  content: "";
+  background-image: url("images/BoxMockup.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  position: absolute;
+  background-attachment: fixed;
+  background-position: center;
+  top: 0px;
+  right: 0px;
+  bottom: 0px;
+  left: 0px;
+  opacity: 0.5;
+  height: 100%;
+}
+
+.Blurb {
+  width: 70%;
+  margin: auto;
+  position: relative;
+  margin-top: 5%;
+}
+.Blurb p {
+  font-family: "interstate", sans-serif;
+  color: #f1faee;
+}
+
+.GalWrapper {
+  display: flex;
+  position: relative;
+  width: 90%;
+  margin: auto;
+  margin-top: 5%;
+  height: auto;
+  flex-wrap: wrap;
+}
+.GalWrapper .Galblock {
+  max-height: 50%;
+  margin-bottom: 1%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 100%;
+  transition: all 1s ease-in-out;
+}
+.GalWrapper .Galblock:hover {
+  background-size: 110%;
+}
+.GalWrapper .Half {
+  aspect-ratio: 1;
+}
+.GalWrapper a {
+  display: block;
+  text-decoration: none;
+  font-family: "interstate", sans-serif;
+  font-weight: 700;
+  color: #f1faee;
+  padding: 2%;
+}
+.GalWrapper a H1 {
+  margin-left: 5%;
+  font-size: 7pt;
+  text-align: center;
+  max-height: 10%;
+  -webkit-backdrop-filter: blur(10px);
+  backdrop-filter: blur(2px);
+}
+.GalWrapper .Gal1 {
+  background-image: url("images/BusStopMock.jpg");
+}
+.GalWrapper .Gal2 {
+  background-image: url("images/MagMockup.jpg");
+}
+.GalWrapper .Gal3 {
+  background-image: url("images/BillboardMockup.jpg");
+}
+.GalWrapper .Gal4 {
+  background-image: url("images/BoxMockup.jpg");
+  background-position: center-bottom;
+}
+.GalWrapper .Gal5 {
+  background-image: url("images/HotPocketJacket.jpg");
+}
+.GalWrapper .Gal6 {
+  background-image: url("images/SocialStill.jpg");
+  background-size: 100%;
+}
+.GalWrapper .Gal6:hover {
+  background-size: 120%;
+}
+.GalWrapper .Gal7 {
+  background-image: url("images/desktop 2.jpg");
+  background-size: 100%;
+}
+.GalWrapper .Gal7:hover {
+  background-size: 120%;
+}
+.GalWrapper .Gal8 {
+  background-image: url("images/desktop 1.jpg");
+}
+.GalWrapper .Gal9 {
+  background-image: url("images/desktop 3.jpg");
+  background-size: 150%;
+}
+.GalWrapper .Gal9:hover {
+  background-size: 170%;
+}
+.GalWrapper .Gal10 {
+  background-image: url("/Qualia/stylesheets/images/Branding/HangTagMock.jpg");
+}
+.GalWrapper .Gal11 {
+  background-image: url("/Elephant/stylesheets/images/MMock1.jpg");
+}
+
+@media (max-width: 320px) {
+  /* smartphones, portrait iPhone, portrait 480x320 phones (Android) */
+}
+@media (max-width: 480px) {
+  /* smartphones, Android phones, landscape iPhone */
+}
+@media (max-width: 600px) {
+  /* portrait tablets, portrait iPad, e-readers (Nook/Kindle), landscape 800x480 phones (Android) */
+}/*# sourceMappingURL=stylePR4.css.map */

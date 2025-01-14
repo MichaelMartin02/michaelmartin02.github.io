@@ -1,0 +1,225 @@
+//fonts//
+$fieldsDis: "fields-display", sans-serif;
+$fields: "fields", sans-serif;
+$interstate: "interstate", sans-serif;
+$newAstro: "new-astro", sans-serif;
+$newAstroSoft: "new-astro-soft", sans-serif;
+
+///color scheme////
+$lightest: #f1faee;
+$red: #e63946;
+$lightBlue: #a8dadc;
+$MedBlue: #457b9d;
+$DarkBlue: #1d3557;
+$black: #000000;
+
+//Flexbox//
+@mixin flexbox {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+/*General for all */
+* {
+  cursor: none;
+}
+html {
+  height: 100%;
+}
+body {
+  font-size: 100%;
+  overflow-x: hidden;
+  height: 100%;
+  background-color: $DarkBlue;
+}
+img {
+  max-width: 100%;
+}
+/****cursor***/
+.cursor {
+  position: fixed;
+  width: 2rem;
+  height: 2rem;
+  background: $red;
+  margin: -10px 0 0 -10px;
+  border-radius: 50%;
+  user-select: none;
+  pointer-events: none;
+  z-index: 1000000000000000000000;
+  mix-blend-mode: multiply;
+}
+
+//leftbar//
+.leftBar {
+  width: 7%;
+  position: absolute;
+  height: 100%;
+  z-index: 100;
+  // background-color: $lightest;
+}
+
+.parallax::before {
+  content: "";
+  background-image: url("images/BoxMockup.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  position: absolute;
+  background-attachment: fixed;
+  background-position: center;
+  top: 0px;
+  right: 0px;
+  bottom: 0px;
+  left: 0px;
+  opacity: 0.5;
+  height: 100%;
+}
+
+
+.Blurb {
+  width: 70%;
+  margin: auto;
+  position: relative;
+  margin-top: 5%;
+  p {
+    font-family: $interstate;
+
+    color: $lightest;
+  }
+}
+.GalWrapper {
+  display: flex;
+  position: relative;
+  width: 90%;
+  margin: auto;
+  margin-top: 5%;
+  height: auto;
+  flex-wrap: wrap;
+  .Galblock {
+    max-height: 50%;
+
+    margin-bottom: 1%;
+
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 100%;
+    transition: all 1s ease-in-out;
+  }
+  .Galblock:hover {
+    background-size: 110%;
+  }
+  .Half {
+    aspect-ratio: 1;
+  }
+  
+
+  ///Setting background images, bkg allows for more responsiveness down to 1000px or so//
+  a {
+    display: block;
+text-decoration: none;
+font-family: $interstate;
+font-weight: 700;
+color:$lightest;
+
+H1{
+  margin-left: 5%;
+  font-size: 7pt;
+  text-align: center;
+  max-height: 10%;
+  -webkit-backdrop-filter: blur(10px);
+  backdrop-filter: blur(2px);
+}
+padding: 2%;
+}
+  .Gal1 {
+    background-image: url("images/BusStopMock.jpg");
+   
+  }
+  .Gal2 {
+    background-image: url("images/MagMockup.jpg");
+    
+  }
+  .Gal3 {
+    background-image: url("images/BillboardMockup.jpg");
+
+ 
+  }
+  .Gal4 {
+    background-image: url("images/BoxMockup.jpg");
+
+    background-position: center-bottom;
+  
+  }
+  .Gal5 {
+    background-image: url("images/HotPocketJacket.jpg");
+  }
+  .Gal6 {
+    background-image: url("images/SocialStill.jpg");
+    background-size: 100%;
+  }
+  .Gal6:hover{
+    background-size: 120%;
+  }
+  .Gal7 {
+    background-image: url("images/desktop 2.jpg");
+    background-size: 100%;
+  }
+  .Gal7:hover{
+    background-size: 120%;
+  }
+  .Gal8 {
+    background-image: url("images/desktop 1.jpg");
+  }
+
+  .Gal9 {
+    background-image: url("images/desktop 3.jpg");
+    background-size:150%;
+    &:hover{
+      background-size: 170%;
+    }
+  }
+
+  .Gal10{
+    background-image: url("/Qualia/stylesheets/images/Branding/HangTagMock.jpg");
+  }
+  .Gal11{
+    background-image: url("/Elephant/stylesheets/images/MMock1.jpg");
+   
+  }
+
+
+
+
+}
+
+// @media (max-width:1100px)  { /* tablet, landscape iPad, lo-res laptops ands desktops */
+// .Half{
+//   width:100%;
+// }
+// .NavLogo{
+
+//   width: 10%;
+// position: fixed;
+
+//   top:3%;
+//   left:1%;
+//  z-index: 1000;
+// }
+// .NavLogo:hover{
+
+//   width: 12%;
+//   filter:drop-shadow(-1px 1px 1px $black)
+// }
+
+// }
+
+@media (max-width: 320px) {
+  /* smartphones, portrait iPhone, portrait 480x320 phones (Android) */
+}
+@media (max-width: 480px) {
+  /* smartphones, Android phones, landscape iPhone */
+}
+@media (max-width: 600px) {
+  /* portrait tablets, portrait iPad, e-readers (Nook/Kindle), landscape 800x480 phones (Android) */
+}
