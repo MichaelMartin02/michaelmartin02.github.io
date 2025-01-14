@@ -1,0 +1,79 @@
+//set parallax img
+.parallax::before {
+      
+     
+  background-image: url("images/Parallax.jpg");
+}
+///Page specific block background sizing//
+.GalWrapper {
+
+  .Galblock {
+    background-size: 140%;
+   
+  }
+  .Gal1, .Gal2{
+    background-size:150% ;
+  }
+
+  .Galblock:hover {
+    background-size: 150%;
+  }
+  .Gal1:hover, .Gal2:hover{
+    background-size: 160%;
+  }
+
+///BACKGROUND IMAGE SETTING FOR GAL///
+  .Gal1 {
+    background-image: url("images/Chocolate 2.jpg");
+   
+  }
+  .Gal2 {
+    background-image: url("images/Chocolate 3.jpg");
+    
+  }
+  .Gal3 {
+    background-image: url("images/Chocolate 4.jpg");
+
+    height: 40%;
+  }
+  .Gal4 {
+    background-image: url("images/SpinachMockup2bottles.jpg");
+
+    background-position: center-bottom;
+    height: 40%;
+  }
+  .Gal5 {
+    background-image: url("images/Squash2.jpg");
+  }
+  .Gal6 {
+    background-image: url("images/PillCombinedExport.jpg");
+    background-size: 100%;
+  }
+  .Gal6:hover{
+    background-size: 120%;
+  }
+  .Gal7 {
+    background-image: url("images/3Drinks.jpg");
+    background-size: 100%;
+  }
+  .Gal7:hover{
+    background-size: 120%;
+  }
+  .Gal8 {
+    background-image: url("images/Bottle2.jpg");
+  }
+
+  .Gal9 {
+    background-image: url("images/BottleBack.jpg");
+  }
+  .Gal10{
+    background-image: url("/images/CSimages/Masida.jpg");
+  }
+  .Gal11{
+    background-image: url("/Qualia/stylesheets/images/Branding/HangTagMock.jpg");
+   
+  }
+     
+}
+
+
