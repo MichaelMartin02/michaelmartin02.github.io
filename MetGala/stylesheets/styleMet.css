@@ -1,0 +1,57 @@
+.parallax::before {
+  background-image: url("images/RecordOnPlayerMock.jpg");
+}
+
+.GalWrapper .Galblock {
+  background-size: 100%;
+  background-repeat: no-repeat;
+}
+.GalWrapper .Galblock:hover {
+  background-size: 110%;
+}
+.GalWrapper .Gal1 {
+  background-image: url("images/FrontBack.jpg");
+}
+.GalWrapper .Gal2 {
+  background-image: url("images/OpenAndCoverMock.jpg");
+}
+.GalWrapper .Gal3 {
+  background-image: url("images/RecordOnPlayerMock.jpg");
+  height: 40%;
+}
+.GalWrapper .Gal4 {
+  background-image: url("images/rolled up.jpg");
+  background-position: center-bottom;
+}
+.GalWrapper .Gal5 {
+  background-image: url("images/front.jpg");
+  background-size: 120%;
+}
+.GalWrapper .Gal5:hover {
+  background-size: 130%;
+}
+.GalWrapper .Gal6 {
+  background-image: url("images/inside.jpg");
+}
+.GalWrapper .Gal7 {
+  background-image: url("images/back.jpg");
+  background-size: 140%;
+}
+.GalWrapper .Gal7:hover {
+  background-size: 150%;
+}
+.GalWrapper .Gal8 {
+  background-image: url("images/SBSpread1.jpg");
+}
+.GalWrapper .Gal9 {
+  background-image: url("images/SBSpread2.jpg");
+}
+.GalWrapper .Gal12 {
+  background-image: url("images/SBSpread3.jpg");
+}
+.GalWrapper .Gal10 {
+  background-image: url("/Posters/stylesheets/images/DivMock3.jpg");
+}
+.GalWrapper .Gal11 {
+  background-image: url("/images/CSimages/Masida.jpg");
+}/*# sourceMappingURL=styleMet.css.map */
