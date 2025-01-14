@@ -1,0 +1,261 @@
+//fonts//
+$fieldsDis: "fields-display", sans-serif;
+$fields: "fields", sans-serif;
+$interstate: "interstate", sans-serif;
+$newAstro: "new-astro", sans-serif;
+$newAstroSoft: "new-astro-soft", sans-serif;
+
+///color scheme////
+$lightest: #f1faee;
+$red: #e63946;
+$lightBlue: #a8dadc;
+$MedBlue: #457b9d;
+$DarkBlue: #1d3557;
+$black: #000000;
+
+$lightest : #FFFBEA;
+$red : #E63A48;
+$Grey : #A8DADC;
+
+$Grey:#818181;
+
+
+//Flexbox//
+@mixin flexbox {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+/*General for all */
+
+
+
+/****cursor***/
+.cursor {
+  position: fixed;
+  width: 2rem;
+  height: 2rem;
+  background: $red;
+  margin: -10px 0 0 -10px;
+  border-radius: 50%;
+  user-select: none;
+  pointer-events: none;
+  z-index: 1000000000000000000000;
+  mix-blend-mode: multiply;
+}
+
+//leftbar//
+.leftBar {
+  width: 7%;
+  position: absolute;
+  height: 100%;
+  z-index: 100;
+  // background-color: $lightest;
+}
+
+.parallax::before {
+  content: "";
+  background-image: url("images/Branding/tagmockup.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  position: absolute;
+  background-attachment: fixed;
+  background-position: center;
+  top: 0px;
+  right: 0px;
+  bottom: 0px;
+  left: 0px;
+  opacity: 0.5;
+  height: 100%;
+}
+
+
+.Blurb {
+  width: 70%;
+  margin: auto;
+  position: relative;
+  margin-top: 5%;
+  p {
+    font-family: $interstate;
+
+    color: $lightest;
+  }
+}
+@media (min-width: 1025px){
+  .Half{
+    width: 46.25%;
+  }
+  .Full{
+    width: 93%;
+  }
+}
+
+.GalWrapper {
+  display: flex;
+  position: relative;
+  width: 92%;
+  margin: auto;
+  margin-top: 5%;
+  height: auto;
+  flex-wrap: wrap;
+  .Galblock {
+    max-height: 50%;
+
+
+    background-repeat: no-repeat;
+    background-size: 100%;
+    transition: all 1s ease-in-out;
+  }
+  .Galblock:hover {
+    background-size: 110%;
+  }
+
+  
+
+  ///Setting background images, bkg allows for more responsiveness down to 1000px or so//
+  a {
+    display: block;
+text-decoration: none;
+font-family: $interstate;
+font-weight: 700;
+color:$lightest;
+
+// H1{
+//   margin-left: 5%;
+//   font-size: 7pt;
+//   text-align: center;
+//   max-height: 10%;
+//   -webkit-backdrop-filter: blur(10px);
+//   backdrop-filter: blur(2px);
+// }
+padding: 2%;
+}
+.CB{
+  width: 100%;
+}
+.TXTBLOCK{
+  height: auto;
+  aspect-ratio: none;
+}
+
+  .Gal1 {
+    background-image: url("images/LogoNormal.png");
+   
+  }
+  .Gal2 {
+    background-image: url("images/LogoCB.jpg");
+    
+  }
+  .Gal3 {
+    background-image: url("images/Branding/HangTagMock.jpg");
+
+ 
+  }
+  .Gal4 {
+    background-image: url("images/Branding/TagPacketFull.jpg");
+
+  
+  
+  }
+  .Gal5 {
+    background-image: url("images/Branding/box\ mockup.jpg");
+  }
+  .Gal6 {
+    background-image: url("images/Branding/bagmockup.jpg");
+    
+  }
+
+  .Gal7 {
+    background-image: url("images/Branding/tagmockup.jpg");
+    background-size: 150%;
+    &:hover{
+      background-size: 160%;
+    }
+  }
+ 
+  .Gal8 {
+    background-image: url("images/Int/Desktop\ -\ 1.jpg");
+    background-position: center top;
+  }
+
+  // .Gal9 {
+  //   background-image: url("images/Int/mobilesite.jpg");
+  //   background-position: center top;
+  
+   
+  // }
+  .Gal12{
+    background-image: url("images/Int/Martin_Michael_Int_Website_Mockup.jpg");
+    background-position: center top;
+    background-size: 130%;
+    &:hover{
+      background-size:140%
+    }
+  }
+
+.Gal13 {
+  background-image: url("images/Still2.jpg");
+  background-position: center;
+}.Gal14 {
+  background-image: url("images/Still1.jpg");
+  background-position: center;
+}
+.Gal15 {
+  background-image: url("images/Advertising/Billboardmockup.jpg");
+  background-position: center top;
+}
+.Gal16{
+  background-image: url("images/Advertising/BusMock.jpg");
+}
+.Gal17{
+  background-image: url("images/Advertising/Ad_Trip_Mockup.jpg");
+}
+.Gal18{
+  background-image: url("images/Advertising/Martin_Michael_Ad_Ambient_Mockup.jpg");
+}
+
+  .Gal10{
+    background-image: url("/images/CSimages/Vegetare.jpg");
+  }
+  .Gal11{
+    background-image: url("/CoolPocket/stylesheets/images/HotPocketJacket.jpg");
+   
+  }
+
+
+
+
+}
+
+// @media (max-width:1100px)  { /* tablet, landscape iPad, lo-res laptops ands desktops */
+// .Half{
+//   width:100%;
+// }
+// .NavLogo{
+
+//   width: 10%;
+// position: fixed;
+
+//   top:3%;
+//   left:1%;
+//  z-index: 1000;
+// }
+// .NavLogo:hover{
+
+//   width: 12%;
+//   filter:drop-shadow(-1px 1px 1px $black)
+// }
+
+// }
+
+@media (max-width: 320px) {
+  /* smartphones, portrait iPhone, portrait 480x320 phones (Android) */
+}
+@media (max-width: 480px) {
+  /* smartphones, Android phones, landscape iPhone */
+}
+@media (max-width: 600px) {
+  /* portrait tablets, portrait iPad, e-readers (Nook/Kindle), landscape 800x480 phones (Android) */
+}

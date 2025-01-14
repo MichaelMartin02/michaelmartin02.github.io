@@ -1,0 +1,166 @@
+/*General for all */
+/****cursor***/
+.cursor {
+  position: fixed;
+  width: 2rem;
+  height: 2rem;
+  background: #E63A48;
+  margin: -10px 0 0 -10px;
+  border-radius: 50%;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
+  pointer-events: none;
+  z-index: 1000000000000000000000;
+  mix-blend-mode: multiply;
+}
+
+.leftBar {
+  width: 7%;
+  position: absolute;
+  height: 100%;
+  z-index: 100;
+}
+
+.parallax::before {
+  content: "";
+  background-image: url("images/Branding/tagmockup.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  position: absolute;
+  background-attachment: fixed;
+  background-position: center;
+  top: 0px;
+  right: 0px;
+  bottom: 0px;
+  left: 0px;
+  opacity: 0.5;
+  height: 100%;
+}
+
+.Blurb {
+  width: 70%;
+  margin: auto;
+  position: relative;
+  margin-top: 5%;
+}
+.Blurb p {
+  font-family: "interstate", sans-serif;
+  color: #FFFBEA;
+}
+
+@media (min-width: 1025px) {
+  .Half {
+    width: 46.25%;
+  }
+  .Full {
+    width: 93%;
+  }
+}
+.GalWrapper {
+  display: flex;
+  position: relative;
+  width: 92%;
+  margin: auto;
+  margin-top: 5%;
+  height: auto;
+  flex-wrap: wrap;
+}
+.GalWrapper .Galblock {
+  max-height: 50%;
+  background-repeat: no-repeat;
+  background-size: 100%;
+  transition: all 1s ease-in-out;
+}
+.GalWrapper .Galblock:hover {
+  background-size: 110%;
+}
+.GalWrapper a {
+  display: block;
+  text-decoration: none;
+  font-family: "interstate", sans-serif;
+  font-weight: 700;
+  color: #FFFBEA;
+  padding: 2%;
+}
+.GalWrapper .CB {
+  width: 100%;
+}
+.GalWrapper .TXTBLOCK {
+  height: auto;
+  aspect-ratio: none;
+}
+.GalWrapper .Gal1 {
+  background-image: url("images/LogoNormal.png");
+}
+.GalWrapper .Gal2 {
+  background-image: url("images/LogoCB.jpg");
+}
+.GalWrapper .Gal3 {
+  background-image: url("images/Branding/HangTagMock.jpg");
+}
+.GalWrapper .Gal4 {
+  background-image: url("images/Branding/TagPacketFull.jpg");
+}
+.GalWrapper .Gal5 {
+  background-image: url("images/Branding/box mockup.jpg");
+}
+.GalWrapper .Gal6 {
+  background-image: url("images/Branding/bagmockup.jpg");
+}
+.GalWrapper .Gal7 {
+  background-image: url("images/Branding/tagmockup.jpg");
+  background-size: 150%;
+}
+.GalWrapper .Gal7:hover {
+  background-size: 160%;
+}
+.GalWrapper .Gal8 {
+  background-image: url("images/Int/Desktop - 1.jpg");
+  background-position: center top;
+}
+.GalWrapper .Gal12 {
+  background-image: url("images/Int/Martin_Michael_Int_Website_Mockup.jpg");
+  background-position: center top;
+  background-size: 130%;
+}
+.GalWrapper .Gal12:hover {
+  background-size: 140%;
+}
+.GalWrapper .Gal13 {
+  background-image: url("images/Still2.jpg");
+  background-position: center;
+}
+.GalWrapper .Gal14 {
+  background-image: url("images/Still1.jpg");
+  background-position: center;
+}
+.GalWrapper .Gal15 {
+  background-image: url("images/Advertising/Billboardmockup.jpg");
+  background-position: center top;
+}
+.GalWrapper .Gal16 {
+  background-image: url("images/Advertising/BusMock.jpg");
+}
+.GalWrapper .Gal17 {
+  background-image: url("images/Advertising/Ad_Trip_Mockup.jpg");
+}
+.GalWrapper .Gal18 {
+  background-image: url("images/Advertising/Martin_Michael_Ad_Ambient_Mockup.jpg");
+}
+.GalWrapper .Gal10 {
+  background-image: url("/images/CSimages/Vegetare.jpg");
+}
+.GalWrapper .Gal11 {
+  background-image: url("/CoolPocket/stylesheets/images/HotPocketJacket.jpg");
+}
+
+@media (max-width: 320px) {
+  /* smartphones, portrait iPhone, portrait 480x320 phones (Android) */
+}
+@media (max-width: 480px) {
+  /* smartphones, Android phones, landscape iPhone */
+}
+@media (max-width: 600px) {
+  /* portrait tablets, portrait iPad, e-readers (Nook/Kindle), landscape 800x480 phones (Android) */
+}/*# sourceMappingURL=styleQualia.css.map */
