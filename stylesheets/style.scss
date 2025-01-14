@@ -1,0 +1,2801 @@
+//Sass variables///
+//fonts//
+$fieldsDis :"fields-display", sans-serif;
+$fields: "fields", sans-serif;
+$AcuminWide: "AcuminWide", sans-serif;
+$newAstro: "new-astro", sans-serif;
+$newAstroSoft: "new-astro-soft", sans-serif;
+$AcuminWide:"acumin-pro-wide", sans-serif;
+///color scheme////
+
+
+
+a{
+  text-decoration: none;
+}
+video{
+  outline: 0px;
+}
+
+$lightest : #FFFBEA;
+$red : #E63A48;
+$Grey : #A8DADC;
+
+$Grey:#818181;
+$Black:#000000; 
+//Flexbox//
+@mixin flexbox {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+  }
+
+  /*General for all */
+  @media (min-width:0px) {
+    *{cursor: none;
+  
+      &::-webkit-scrollbar-track
+      {
+        border: 1px solid black;
+        background-color: $lightest;
+      }
+      
+      &::-webkit-scrollbar
+      {
+        width: 10px;
+        background-color: $lightest;
+      }
+      
+      &::-webkit-scrollbar-thumb
+      {
+        background-color: #000000;	
+      }
+
+    }
+
+
+
+    
+  html{
+    height: 100%;
+  }
+  body {font-size: 100%; background-color: $lightest; overflow-x:hidden;height: 100%;}
+  .scrolli{
+    position: absolute;
+    top: 90%;
+    left: 1300%;
+    // transform: translate(-50%,-50%);
+  }
+  .scrolli span{
+    display: block;
+    width: 20px;
+    height: 20px;
+    border-bottom: 1px solid $red;
+    border-right: 1px solid $red;
+    transform: rotate(45deg);
+    margin: -10px;
+    animation: animate 2s infinite;
+  }
+  .scrolli span:nth-child(2){
+    animation-delay: -0.2s;
+  }
+  .scrolli span:nth-child(3){
+    animation-delay: -0.4s;
+  }
+  @keyframes animate{
+    0%{
+      opacity: 0;
+      transform: rotate(45deg) translate(-20px,-20px);
+    }
+    50%{
+      opacity: 1;
+    }
+    100%{
+      opacity: 0;
+      transform: rotate(45deg) translate(20px,20px);
+    }
+  }
+  /****cursor***/
+
+  .cursor{
+    position: fixed;
+    // width: 2rem;
+    height: 2rem;
+    background: $red;
+    margin: -0.625rem 0 0 -0.625rem;
+    border-radius: 50%;
+    user-select: none;
+    pointer-events: none;
+    z-index: 1000000000000000000000;
+    mix-blend-mode: difference;
+  }
+  
+  
+    .mNavOn{//Mobile Navigation on state//
+      @include flexbox();
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    flex:1;
+    position:absolute;
+    width: 100%;
+    min-width: 100%;
+  
+    top:0%;
+    right: 0%;
+    z-index: 1000;
+    height: 100%;
+    position: fixed;
+    .BTNWrapper{//Button in on state//
+      width: 5%;
+      max-height: 10%;
+      position: absolute;
+      top:5%;
+      right: 5%;
+      aspect-ratio: 1;
+      
+    }
+    }
+    
+  .mobileNav{//mobile nav off state//
+    @include flexbox();
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    flex:1;
+    position:fixed;
+    width: 7%;
+    min-width: 5%;
+  
+    top:5%;
+    right: 5%;
+    z-index: 1000000;
+    aspect-ratio: 1/2;
+    .BTNWrapper{//Button in off state//
+      width: 100%;
+      max-height: 100%;
+      position: absolute;
+      top:5%;
+      right: 5%;
+      aspect-ratio: 1;
+      min-width: 10%;
+    }
+    
+  }
+  
+  .backWrapper{
+    width: 5%;
+    max-height: 10%;
+    aspect-ratio: 1;
+    position: absolute;
+    top:5%;
+    left:5%;
+    display: none;
+    z-index: 100000000;
+    .Bline{
+      width: 60%;
+      height: 10%;
+      background: $Black;
+      margin: 5% 0 5% 0;
+      border-radius: 10%;
+  
+    }
+    .Bline:nth-child(1){
+      transform: rotate(-45deg) translate(15%, 15%);
+    }
+    .Bline:nth-child(2){
+      transform: rotate(45deg) translate(30%, 90%);
+    }
+  }
+    .line{//Button Lines off state//
+      width: 100%;
+      height: 10%;
+      margin: 5% 0 5% 0;
+      background: $Black;
+      border-radius: 10%;
+     
+      transition: all 300ms cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    }
+    //Button Lines On state//
+      .lineon:nth-child(1){
+        height: 15%;
+        transform: rotate(45deg) translate(20%, 30%);
+      }
+      .lineon:nth-child(2) {
+        visibility: hidden;
+      }
+      .lineon:nth-child(3) {
+        height: 15%;
+        transform: rotate(-45deg) translate(20%,-50%) ;
+      }
+    
+    .mNavBody{//Mobile Nav Gallery/About buttons off state
+      display: none;
+      .GalleryMobileBTN,.AboutMobileBTN{
+        H2{font-family: $AcuminWide;
+        font-size: 15pt;
+        }
+      }
+    }
+    .on{//Mobile Nav Gallery/About buttons on state//
+      @include flexbox();
+      flex-direction: column;
+      width: 100%;
+      height: 100%;
+      background-color: $red;
+      background-blend-mode: overlay;
+      text-align: center;
+      H2{
+        font-family: $AcuminWide;
+        
+        font-size: 75pt;
+      
+      }
+  
+    }
+    .Mred{
+      color:$lightest;
+    }
+    .mlist{
+      H2{
+        line-height: 30pt;
+      }
+    }
+    .mPhone, .mMail, .mMedia{
+      line-height: 20pt;
+    }
+    .mMedia{
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      a{
+        display: block;
+
+    
+      }
+    }
+    .mGalleryPanel{
+      display: none;
+      width: 100%;
+      height: 100%;
+      position: fixed;
+      top:15%;
+      right: 0;
+      z-index: 10000;
+       background-color: $red;
+      overflow: scroll;
+      .mGalleryTitle{
+        H2{
+          font-family: $AcuminWide;
+          color:$Black;
+          font-size: 21pt;
+        }
+      }
+      .mGalleryWrapper{
+        @include flexbox();
+        .mGalBox{
+          width: 100%;
+          aspect-ratio: 1;
+          background-color: grey;
+          margin-bottom: 5%;
+          background-size: cover;
+          background-position: center;
+        }
+      }
+    }
+    .mAboutPanel{
+      display: none;
+      width: 100%;
+      height: 90%;
+      position: fixed;
+      top:10%;
+      right: 0;
+      z-index: 10000;
+      background-color: $red;
+   overflow-y: scroll;
+      .mAboutTitle{
+        width: 100%;
+        text-align: center;
+        margin-bottom: 5%;
+      }
+      H2{
+        font-family: $AcuminWide;
+          color:$Black;
+          font-size: 21pt;
+      }
+      .mAboutWrapper{
+        width: 90%;
+        margin: auto;
+        p{
+          font-family: $AcuminWide;
+          font-size: 8pt;
+          line-height: 13pt;
+          font-weight: 400;
+          color:$lightest;
+        }
+    
+      }
+  
+    }
+  
+    ///Left Logo tablet sizing//
+    .leftBar{
+      width: 10%;
+      position: absolute;
+        height: 100%;
+        z-index: 100;
+      }
+      .NavLogo{
+        display: none;
+        width: 20%;
+        position: fixed;
+        top:3%;
+        left:4%;
+       z-index: 1000;
+        &:hover{
+          width: 12%;
+      
+        }
+      }
+      
+      header{
+        position: relative;
+          background-color: $lightest;
+          height: 100%;
+      }
+      //Video opening//
+      .OpenVideo{
+        display: none;
+        width: 100%;
+        height: 100%;
+        .Vid{
+          width: 40%;
+          height: 60%;
+          position: absolute;
+          left:30%;
+          top:20%;
+          
+        }
+      }
+      #EnterBTN{
+        display: none;
+        flex-direction: column;
+        position: relative;
+        width: 40%;
+        aspect-ratio: 1;
+        left:28%;
+      top:14%;
+      background-color: $lightest;
+      
+      border:none;
+
+      z-index: 100;
+      justify-content: center;
+      align-items: center;
+      align-content: center;
+ 
+  
+      .ClickMe{
+        background-color: $lightest;
+        width: 100%;
+        text-align: center;
+        height: 30%;
+        h1{
+          
+          margin-top: 7%;
+          font-family: $AcuminWide;
+          font-size: 16pt;
+          color: $Black;
+     
+        }
+      }
+      
+      }
+       
+      #EnterBTN h1:hover{
+        font-size: 24pt;
+        color: $red;
+
+      }
+      
+      
+      
+      ///clicked spans///
+
+   
+ 
+   
+     
+      
+      .Name{
+        display: none;
+        width: 100%;
+        min-height: 5%;
+        height: auto;
+        position: absolute;
+        bottom:0;
+        .M{
+          display: inline-block;
+         
+        
+          
+          border-top: 5pt solid $red;
+          text-align: center;
+        }
+        H1{
+          font-family: $AcuminWide;
+          font-size: 20pt;
+          color:$Black;
+          font-weight: 700;
+        }
+        .Vid{
+          display: inline-block;
+          H2{
+            font-family: $AcuminWide;
+            font-size: 12pt;
+            color: $red;
+          }
+        }
+        .Vid:hover{
+          H2{
+            color: #000000;
+          }
+        }
+       
+      }
+  
+      ///Case study Mobile version
+      .nav{
+        display: none;
+      }
+      main{
+        
+          height: auto;
+          display: none;
+          position: relative;
+          top:10pt;
+          
+      }
+    
+      .CSBlock{
+        background-color: $lightest;
+        
+        // border: solid $Black 0.25rem;
+      //  margin-bottom: 1%;
+      
+      //  border: solid  $Black 0.25rem;
+      
+       width: 90%;
+     height:20%;
+   
+       
+      
+      
+      
+      }
+      .CS1, .CS2, .CS4, .CS5, .CS6, .CS7, .CS9, .CS10{
+        width: 90%;
+        max-height: 40rem;
+        aspect-ratio: 1;
+       
+      }
+      .CS1, .CS4, .CS6, .CS9{
+        margin-right: 0%;
+      }
+      .CS3,.CS8 {
+        width: 90%;
+        max-height: 40rem;
+      aspect-ratio: 1;
+      }
+    
+        .CSBKG{
+          display: block;
+          width: 100%;
+          height: 100%;
+          content:'';
+          
+          background-position: center;
+          background-size: cover;
+          
+        
+        }
+      
+        
+        .CSHOVER{
+          display: none;
+          width: 40%;
+       max-height: 40rem;
+       aspect-ratio: 1;
+        background-color: $Black;
+        text-align: center;
+        a{
+          display: block;
+          text-decoration: none;
+          color:$lightest;
+          width: 100%;
+          height: 100%;
+          .linkText{
+            height: 100%;
+            width: 100%;
+            
+            H2{
+            padding-top: 30%;
+              font-family: $AcuminWide;
+              font-size: 21pt;
+              font-weight: 700
+            }
+            H3{
+              font-family: $AcuminWide;
+              font-weight: 300;
+              font-size: 16pt;
+            }
+          }
+        }
+        
+      
+      
+        background-blend-mode: multiply;
+        position: relative;
+        top:0;
+        right: auto;
+        color:$lightest;
+        }
+        .QualiaBKG{
+          background-image: url(/Qualia/stylesheets/images/Int/Martin_Michael_Int_Website_Mockup_Cropped.jpg);
+          
+        }
+        .ElephantBKG{
+          background-image: url(/Elephant/stylesheets/images/MMock1.jpg);
+        }
+        .WDBKG{
+          background-image: url(/WD-40/stylesheets/images/MagMock.jpg);
+        }
+        .ClassBKG{
+          background-image: url(/Classics/stylesheets/images/CoverDuo.jpg);
+        }
+        .SonoraBKG{
+          background-image: url(/Sonora/stylesheets/images/LogoSign.jpg);
+        }
+        .PostBKG{
+          background-image: url(/Posters/stylesheets/images/CompMock2.jpg);
+        }
+        .MetBKG{
+          background-image: url(/MetGala/stylesheets/images/FrontBack.jpg);
+        }
+        
+
+      .CS1 {
+        .MasidaBKG{
+          display: block;
+          width: 100%;
+          height: 100%;
+          content:'';
+          background-image: url(/images/CSimages/Masida.jpg);
+          background-position: center;
+          background-size: cover;
+          
+        
+        }
+      
+        }
+        .MasidaHover{
+          display: none;
+          width: 40%;
+       max-height: 40rem;
+       aspect-ratio: 1;
+        background-color: $Black;
+        text-align: center;
+        a{
+          display: block;
+          text-decoration: none;
+          color:$lightest;
+          width: 100%;
+          height: 100%;
+          .linkText{
+            height: 100%;
+            width: 100%;
+            
+            H2{
+            padding-top: 30%;
+              font-family: $AcuminWide;
+              font-size: 21pt;
+              font-weight: 700
+            }
+            H3{
+              font-family: $AcuminWide;
+              font-weight: 300;
+              font-size: 16pt;
+            }
+          }
+        }
+      
+      
+        background-blend-mode: multiply;
+        position: absolute;
+        top:0;
+        right: auto;
+        color:$lightest;
+        }
+      
+      
+      .CS2{
+        .VegetareBKG{
+          display: block;
+          width: 100%;
+          height: 100%;
+          content:'';
+          background-image: url(/images/CSimages/Vegetare.jpg);
+          background-position: center;
+          background-size: cover;
+          
+        
+        }
+      }
+        .VegetareHover{
+          display: none;
+          width: 40%;
+       max-height: 40rem;
+       aspect-ratio: 1;
+        background-color: $Black;
+        text-align: center;
+        a{
+          display: block;
+          text-decoration: none;
+          color:$lightest;
+          width: 100%;
+          height: 100%;
+          .linkText{
+            height: 100%;
+            width: 100%;
+            
+            H2{
+            padding-top: 30%;
+              font-family: $AcuminWide;
+              font-size: 21pt;
+              font-weight: 700
+            }
+            H3{
+              font-family: $AcuminWide;
+              font-weight: 300;
+              font-size: 16pt;
+            }
+          }
+        }
+        background-blend-mode: multiply;
+        position: absolute;
+        top:0;
+        right: auto;
+        color:$lightest;
+      }
+
+      .CS4 {
+        .PocketBKG{
+          display: block;
+          width: 100%;
+          height: 100%;
+          content:'';
+          background-image: url(/images/CSimages/HotPocket.jpg);
+          background-position: center;
+          background-size: cover;
+          
+        
+        }
+      
+        }
+        .PocketHover{
+          display: none;
+          width: 40%;
+       max-height: 40rem;
+       aspect-ratio: 1;
+        background-color: $Black;
+        text-align: center;
+        a{
+          display: block;
+          text-decoration: none;
+          color:$lightest;
+          width: 100%;
+          height: 100%;
+          .linkText{
+            height: 100%;
+            width: 100%;
+            
+            H2{
+            padding-top: 30%;
+              font-family: $AcuminWide;
+              font-size: 21pt;
+              font-weight: 700
+            }
+            H3{
+              font-family: $AcuminWide;
+              font-weight: 300;
+              font-size: 16pt;
+            }
+          }
+        }
+      
+      
+        background-blend-mode: multiply;
+        position: relative;
+        top:0;
+        right: auto;
+        color:$lightest;
+        }
+
+        
+      
+      .CSWrapper{
+        width: 100%;
+        height: 100%;
+        position: relative;
+        
+        top:1%;
+        @include flexbox();
+        align-content: flex-start;
+        justify-content: center;
+      
+       
+      }
+  
+      
+    
+     
+  .MasidaBKG, .VegetareBKG, .CSBKG{
+    a{
+      display: block;
+      width: 100%;
+      height: 100%;
+    }
+  } 
+      .MasidaBKG:hover + .MasidaHover, .MasidaHover:hover{
+        display: none;
+        
+      }
+      
+      .VegetareBKG:hover + .VegetareHover, .VegetareHover:hover{
+        display: none;
+      }
+      
+  
+      ///head logo mobile
+      .HeadLogo{
+        position: absolute;
+        right:22%;
+        width: 50%;
+        max-height: 50%;
+        top:30%;
+        display: none;
+      
+        aspect-ratio: 1;
+        z-index: 1;
+
+      }
+  
+      //EnterBTN//
+      #EnterBTN{
+    display: none;
+    
+        width: 50%;
+        aspect-ratio: 1;
+        left:25%;
+      top:50%;
+      
+    
+    
+      z-index: 100;
+      }
+      @keyframes idle1{
+        0%{
+      left:25%;
+      top:15em;
+        }
+        50%{
+      left:30%;
+      top:12em;
+        }
+        100%{
+          left:25%;
+      top:15em;
+        }
+      }
+      
+  }
+  #galleryPanel, #aboutPanel{
+    background-color: #BE1E2D;
+    width: 90%;
+    right: -100%;
+    height: 0%;
+    position: absolute;
+    top:2%;
+    
+ 
+    z-index: 10000;
+    overflow: hidden;
+    
+  }
+  footer{
+    @include flexbox();
+    justify-content: center;
+    margin-bottom: 2%;
+    margin-top: 5%;
+    
+    background-color: $lightest;
+    
+  
+    
+    img{
+      width: 30%;
+      height: 70%;
+    }
+    .Dis{
+      width: 100%;
+      height: auto;
+      text-align: center;
+      padding:2%;
+      H2{
+        font-family: $AcuminWide;
+          font-size: 6pt;
+          font-weight: 300;
+          color:$Black;
+          display: inline;
+      }
+    }
+   
+    .footerInfo{
+      width: 80%;
+     text-align: center;
+     display: flex;
+     flex-direction: column;
+     align-items: center;
+     justify-content: space-around;
+     margin-bottom: 2%;
+      H1{
+        font-family: $AcuminWide;
+        font-size: 9pt;
+        font-weight: 500;
+        color:$red;
+        display: inline;
+     
+      
+  
+      }
+      H2{
+        font-family: $AcuminWide;
+        font-size: 6pt;
+        font-weight: 300;
+        color:$Black;
+        display: inline;
+      }
+      .FooterLinks{
+        width: 50%;
+        margin-top: 10%;
+        height: auto;
+        @include flexbox();
+        flex-direction: column;
+        align-items: center;
+        a{
+         width: 40%;
+    
+          img{
+            width: 100%;
+          }
+        }
+        a:hover{
+         width: 45%; 
+        }
+      }
+    }
+  }
+
+  ////Gallery BKG images//
+  .GalBlock{
+    background-size: cover;
+    background-position: center;
+    a{
+      display: block;
+      width: 100%;
+      height: 100%;
+    }
+  }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  @media (min-width:0px)  { /* smartphones, portrait iPhone, portrait 480x320 phones (Android) */ 
+    .Name{
+      display: none;
+      width: 100%;
+      min-height: 5%;
+      height: auto;
+      position: absolute;
+      bottom:0;
+      .M{
+        display: inline-block;
+       
+      
+        
+        border-top: 5pt solid $red;
+        text-align: center;
+      }
+      H1{
+        font-family: $AcuminWide;
+        font-size: 20pt;
+        color:$Black;
+        font-weight: 700;
+      }
+      .Vid{
+        display: inline-block;
+        H2{
+          font-family: $AcuminWide;
+          font-size: 12pt;
+          color: $red;
+        }
+      }
+     
+    }
+
+    .sliderWrapper{
+      display: none;
+      position: absolute;
+      left:0%;
+      top:0%;
+      width: 100%;
+      height: 100%;
+      overflow: hidden;
+      opacity: 80%;
+    
+    }
+    .sliding-background{
+      @include flexbox();
+      flex-wrap: nowrap;
+      justify-content: flex-start;
+      width: 300%;
+      height: 100%;
+      animation: slide 50s linear infinite;
+    }
+    .sliding-img{
+      height: 100%;
+      z-index: 0;
+    
+    }
+    @keyframes slide{
+      0%{
+        transform: translate3d(0, 0, 0);
+      }
+      100%{
+        transform: translate3d(-700%, 0, 0);
+      }
+    
+    }
+   
+   
+    .mobileNav{//mobile nav off state//
+ 
+      width: 12%;
+      min-width: 5%;
+    
+    
+      .BTNWrapper{//Button in off state//
+        width: 100%;
+        max-height: 100%;
+        position: absolute;
+        top:5%;
+        right: 5%;
+        aspect-ratio: 1;
+        min-width: 10%;
+      }
+      
+    }
+    .mNavOn{//Mobile Navigation on state//
+   
+    .BTNWrapper{//Button in on state//
+      width: 10%;
+      max-height: 10%;
+      position: absolute;
+      top:5%;
+      right: 5%;
+      aspect-ratio: 1;
+      
+    }
+    }
+    .NavLogo{
+      display: none;
+      width: 20%;
+      position: fixed;
+      top:3%;
+      left:1%;
+   
+      &:hover{
+        width:21%;
+        
+      }
+    }
+
+
+    footer{
+    margin-top: 10%;
+    .footerInfo{
+      flex-direction: column;
+      div{
+        margin-bottom: 2%;
+      }
+      H1{
+        font-size: 12pt;
+      }
+      H2{
+        font-size: 10pt;
+      }
+      .FooterLinks{
+        margin-top: 0%;
+        width: 20%;
+        flex-direction: column;
+        align-items: center;
+       
+        a{
+         
+          width: 60%;
+         
+        }
+        a:hover{
+          width: 65%; 
+         }
+      }
+    }
+  }
+    .mphoto{
+      width: 96%;
+   text-align: center;
+      margin-right:3% ;
+   margin-top: 10%;
+      margin-bottom: 10%;
+
+      padding: 2%;
+     
+    
+      .mHead{
+  
+        width: 100%;
+        height: 20%;
+        aspect-ratio: 1/1.2;
+        background-image: url(/images/about.jpg);
+        background-position: center;
+        background-size: 100%;
+        opacity: 90%;
+      }
+  }
+  
+  
+  
+  
+  
+  }
+  @media (min-width:480px)  { /* smartphones, Android phones, landscape iPhone */
+    .mGalBox{
+      width: 40%;
+      aspect-ratio: 1;
+      background-color: grey;
+      margin-bottom: 5%;
+    }
+    .NavLogo{
+      display: none;
+      width: 15%;
+      position: fixed;
+      top:3%;
+      left:2%;
+   
+      &:hover{
+        width:21%;
+       
+      }
+      
+
+    }
+    .sliderWrapper{
+      display: none;
+      position: absolute;
+      left:0%;
+      top:0%;
+      width: 100%;
+      height: 100%;
+      overflow: hidden;
+      opacity: 80%;
+    
+    }
+    .sliding-background{
+      @include flexbox();
+      flex-wrap: nowrap;
+      justify-content: flex-start;
+      width: 300%;
+      height: 100%;
+      animation: slide 90s linear infinite;
+    }
+    .sliding-img{
+      height: 100%;
+      z-index: 0;
+    
+    }
+    @keyframes slide{
+      0%{
+        transform: translate3d(0, 0, 0);
+      }
+      100%{
+        transform: translate3d(-400%, 0, 0);
+      }
+    
+    }
+
+    footer{
+      @include flexbox();
+      justify-content: center;
+      margin-bottom: 2%;
+      margin-top: 2%;
+      flex-direction: row;
+      background-color: $lightest;
+      
+    
+      
+      img{
+        width: 30%;
+        height: 70%;
+      }
+      .Dis{
+      
+        H2{
+          font-family: $AcuminWide;
+            font-size: 16pt;
+            font-weight: 300;
+            color:$Black;
+            display: inline;
+        }
+      }
+     
+      .footerInfo{
+        width: 80%;
+       text-align: center;
+       display: flex;
+       align-items: center;
+       justify-content: space-around;
+       margin-bottom: 2%;
+        H1{
+          font-family: $AcuminWide;
+          font-size: 18pt;
+          font-weight: 500;
+          color:$red;
+          display: inline;
+    
+        }
+        H2{
+          font-family: $AcuminWide;
+          font-size: 16pt;
+          font-weight: 300;
+          color:$Black;
+          display: inline;
+        }
+        .FooterLinks{
+          width: 10%;
+          
+          height: auto;
+          flex-direction: column;
+          align-items: center;
+          @include flexbox();
+          a{
+           width: 60%;
+           
+            img{
+              width: 80%;
+              margin-bottom: 5%;
+            }
+          }
+          a:hover{
+            width: 62%; 
+           }
+        }
+      }
+    }
+    
+    
+  
+    .Name{
+      display: none;
+      width: 100%;
+      min-height: 10%;
+      height: auto;
+      position: absolute;
+      bottom:0;
+      .M{
+        display: inline-block;
+       
+      
+        
+        border-top: 5pt solid $red;
+        text-align: center;
+      }
+      H1{
+        font-family: $AcuminWide;
+        font-size: 30pt;
+        color:$Black;
+        font-weight: 700;
+      }
+      .Vid{
+        display: inline-block;
+        H2{
+          font-family: $AcuminWide;
+          font-size: 12pt;
+          color: $red;
+        }
+      }
+     
+    }
+  }
+  @media (min-width:801px)  { 
+    .mobileNav{//mobile nav off state//
+ 
+      width: 7%;
+      min-width: 5%;
+    
+    
+      .BTNWrapper{//Button in off state//
+        width: 100%;
+        max-height: 100%;
+        position: absolute;
+        top:5%;
+        right: 5%;
+        aspect-ratio: 1;
+        min-width: 10%;
+      }
+      
+    }
+    .mNavOn{//Mobile Navigation on state//
+   
+    .BTNWrapper{//Button in on state//
+      width: 7%;
+      max-height: 10%;
+      position: absolute;
+      top:5%;
+      right: 5%;
+      aspect-ratio: 1;
+      
+    }
+    }
+    .NavLogo{
+      display: none;
+      width: 10%;
+      position: fixed;
+      top:3%;
+      left:2%;
+   
+      &:hover{
+        width:14%;
+        
+      }
+    
+    }
+
+
+    footer{
+      @include flexbox();
+      justify-content: center;
+      margin-bottom: 2%;
+      margin-top: 2%;
+      flex-direction: row;
+      background-color: $lightest;
+      
+    
+      
+      img{
+        width: 30%;
+        height: 70%;
+      }
+      .footerInfo{
+        width: 80%;
+       text-align: center;
+       display: flex;
+       align-items: center;
+       justify-content: space-around;
+       margin-bottom: 2%;
+        H1{
+          font-family: $AcuminWide;
+          font-size: 18pt;
+          font-weight: 500;
+          color:$red;
+          display: inline;
+    
+        }
+        H2{
+          font-family: $AcuminWide;
+          font-size: 16pt;
+          font-weight: 300;
+          color:$Black;
+          display: inline;
+        }
+        .FooterLinks{
+          width: 20%;
+          height: auto;
+          @include flexbox();
+          a{
+           width: 20%;
+            img{
+              width: 80%;
+            }
+          }
+          a:hover{
+            width: 22%; 
+           }
+        }
+      }
+    }
+    
+    .Name{
+      display: none;
+      width: 100%;
+      min-height: 12%;
+      height: auto;
+      position: absolute;
+      bottom:0;
+      .M{
+        display: inline-block;
+       
+      
+        
+        border-top: 8pt solid $red;
+        text-align: center;
+      }
+      H1{
+        font-family: $AcuminWide;
+        font-size: 50pt;
+        color:$Black;
+        font-weight: 700;
+      }
+      .Vid{
+        display: inline-block;
+        H2{
+          font-family: $AcuminWide;
+          font-size: 12pt;
+          color: $red;
+        }
+      }
+     
+    }
+   }
+
+
+  @media (min-width:1025px){
+*{cursor: none;}
+
+html{
+  height: 100%;
+}
+body {font-size: 100%; background-color: $lightest; overflow-x:hidden;height: 100%;}
+img {max-width: 100%;}
+/****cursor***/
+.cursor{
+  position: fixed;
+  width: 2rem;
+  height: 2rem;
+  background: $red;
+  margin: -0.625rem 0 0 -0.625rem;
+  border-radius: 50%;
+  user-select: none;
+  pointer-events: none;
+  z-index: 1000000000000000000000;
+  mix-blend-mode: normal;
+}
+
+
+///navbar///
+/// htm
+.nav{
+ 
+  height: 100%;
+ position: fixed;
+ flex-direction: column;
+ top:0;
+ right: 0;
+ display: none;
+ width: 8%;
+
+ border-radius: 0 0 0.625rem 0.625rem;
+//background-color: $lightest;
+ overflow: hidden;
+ z-index: 1000;
+ 
+
+ ul{
+  @include flexbox();
+  flex-wrap: nowrap;
+  flex-direction: column;
+  
+  text-align: left;
+  position: relative;
+  justify-content: center;
+
+  color: $red;
+  top:20%;
+  height: 60%;
+
+  li{
+    font-family: $AcuminWide;
+  font-weight: 400;
+
+  
+  text-align: left;
+  height: 70%;
+  rotate: 90deg;
+  a{
+    color: black;
+    text-decoration: none;
+    top:45%;
+
+  }
+  
+  
+  }
+}
+
+
+}
+
+////desktop navbar responsiveness breaks//
+
+///making the border boxes///
+.nav1{
+  position: relative;
+  // padding:0.3em;
+  padding-left: 0.3em;
+  padding-right: 0.3em;
+  padding-bottom: 0.5em;
+}
+.nav1::before{
+content: '';
+padding-right: 0.3em;
+width: 10%;
+height:80%;
+z-index: 1;
+}
+.nav1::before{
+  left: 0;
+  top: 0;
+  border-left: 0.3rem solid $red;
+  // border-top: 0.1rem solid $red;
+
+}
+
+
+///hover effects////
+/// 
+.nav1:hover{
+  height: 100%;
+}
+
+ .nav1:hover:before{
+  border:none;
+
+  border-right: 1rem solid $Black;
+  left:0%;
+  transition: 0.15s ease-in;
+z-index: 1;
+
+    
+ }
+
+
+
+
+
+ ////navbar Responsiveness breaks///
+//leftbar//
+.leftBar{
+  
+  width: 7%;
+  position: absolute;
+  height: 100%;
+  z-index: 100;
+ // background-color: $lightest;
+
+}
+ .NavLogo{
+  display: none;
+  width: 5%;
+position: fixed;
+
+  top:3%;
+  left:2%;
+ z-index: 1000;
+}
+.NavLogo:hover{
+  
+  width: 6%;
+
+}
+
+///above fold///
+header{
+  position: relative;
+    background-color: $lightest;
+    height: 100%;
+}
+//Video opening//
+.OpenVideo{
+  display: none;
+  width: 100%;
+  height: 100%;
+  .Vid{
+    width: 40%;
+    height: 60%;
+    position: absolute;
+    left:30%;
+    top:20%;
+  }
+}
+#EnterBTN{
+  display: none;
+  flex-direction: column;
+  position: relative;
+  width: 40%;
+  aspect-ratio: 1;
+  left:28%;
+top:14%;
+background-color: $lightest;
+border:none;
+z-index: 100;
+justify-content: center;
+align-items: center;
+align-content: center;
+
+.ClickMe{
+  background-color: $lightest;
+  width: 100%;
+  text-align: center;
+  height: 10%;
+  h1{
+    margin-top: 3%;
+    font-family: $AcuminWide;
+    font-size: 21pt;
+    color: $Black;
+
+  }
+}
+
+}
+ 
+#EnterBTN h1:hover{
+  font-size: 24pt;
+  color: $red;
+
+}
+
+
+
+///clicked spans///
+
+
+
+
+
+///sliding background///
+.sliderWrapper{
+  display: none;
+  position: absolute;
+  left:0%;
+  top:0%;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  opacity: 80%;
+
+}
+.sliding-background{
+  @include flexbox();
+  flex-wrap: nowrap;
+  justify-content: flex-start;
+  width: 300%;
+  height: 100%;
+  animation: slide 90s linear infinite;
+}
+.sliding-img{
+  height: 100%;
+  z-index: 0;
+
+}
+@keyframes slide{
+  0%{
+    transform: translate3d(0, 0, 0);
+  }
+  100%{
+    transform: translate3d(-120%, 0, 0);
+  }
+
+}
+
+//HeaderLogo//
+.HeadLogo{
+  position: absolute;
+  right:35%;
+  width: 30%;
+  max-height: 50%;
+  top:25%;
+  display: none;
+
+  aspect-ratio: 1;
+  z-index: 1;
+
+  .Logo{
+    width: 90%;
+    height: 90%;
+  }
+  .ReelBTN{
+    display: block;
+    width: 30%;
+   
+  margin: auto;
+  margin-top: 10%;
+    text-align: center;
+    background-color: $Grey;
+    
+    padding: 2% 10% 2% 10%;
+    border-radius: 2rem;
+    H2{
+      font-family: $AcuminWide;
+      font-weight: 700;
+      text-decoration: none;
+      color:$Black;
+      font-size: 13pt;
+
+    }
+    &:hover{
+      background-color: $red;
+      
+      H2{
+        color: $lightest;
+      }
+    }
+  }
+}
+
+////main/work display area////
+main{
+  height: auto;
+  display: none;
+  position: relative;
+  top:10pt;
+  
+}
+
+.CSWrapper{
+  width: 100%;
+  height: 100%;
+  position: relative;
+  top:1%;
+  @include flexbox();
+  justify-content: center;
+align-content: flex-start;
+ margin-top: 2%;
+}
+.CSBlock{
+  background-color:$lightest;
+// border:solid 1px $Black;
+ margin-bottom: 0%;
+
+//  border: solid $Black 0.2rem;
+
+
+}
+.CS1, .CS2, .CS3, .CS4, .CS5, .CS6, .CS8, .CS7, .CS9, .CS10{
+  width: 40%;
+  max-height: 40rem;
+  aspect-ratio: 1;
+  // margin-bottom: 2%;
+ 
+}
+
+.CS4,.CS1, .CS7,.CS9{
+  width: 40%;
+  // margin-right: 2%;
+
+
+}
+.CS5{
+  width: 40%;
+  
+}
+
+
+
+
+.CS3, .CS6 {
+  width: 80%;
+  height: 40rem;
+}
+.CS1 {
+  .MasidaBKG{
+    display: block;
+    width: 100%;
+    height: 100%;
+    content:'';
+    background-image: url(/images/CSimages/Masida.jpg);
+    background-position: center;
+    background-size: cover;
+    
+  
+  }
+
+  }
+  .MasidaHover{
+    display: none;
+    width: 40%;
+ max-height: 40rem;
+ aspect-ratio: 1;
+  background-color: $Black;
+  text-align: center;
+  a{
+    display: block;
+    text-decoration: none;
+    color:$lightest;
+    width: 100%;
+    height: 100%;
+    .linkText{
+      height: 100%;
+      width: 100%;
+      
+      H2{
+      padding-top: 30%;
+        font-family: $AcuminWide;
+        font-size: 21pt;
+        font-weight: 700
+      }
+      H3{
+        font-family: $AcuminWide;
+        font-weight: 300;
+        font-size: 16pt;
+      }
+    }
+  }
+
+
+  background-blend-mode: multiply;
+  position: absolute;
+  top:0%;
+  right: auto;
+  color:$lightest;
+  }
+
+
+
+
+
+.MasidaBKG:hover + .MasidaHover, .MasidaHover:hover{
+  display: block;
+  
+}
+
+.CS2{
+  .VegetareBKG{
+    display: block;
+    width: 100%;
+    height: 100%;
+    content:'';
+    background-image: url(/images/CSimages/Vegetare.jpg);
+    background-position: center;
+    background-size: cover;
+    
+  
+  }
+}
+  .VegetareHover{
+    display: none;
+    width: 40%;
+ max-height: 40rem;
+ aspect-ratio: 1;
+  background-color: $Black;
+  text-align: center;
+  a{
+    display: block;
+    text-decoration: none;
+    color:$lightest;
+    width: 100%;
+    height: 100%;
+    .linkText{
+      height: 100%;
+      width: 100%;
+      
+      H2{
+      padding-top: 30%;
+        font-family: $AcuminWide;
+        font-size: 21pt;
+        font-weight: 700
+      }
+      H3{
+        font-family: $AcuminWide;
+        font-weight: 300;
+        font-size: 16pt;
+      }
+    }
+  }
+  background-blend-mode: multiply;
+  position: absolute;
+  top:0%;
+  right: auto;
+  color:$lightest;
+}
+.VegetareBKG:hover + .VegetareHover, .VegetareHover:hover{
+  display: block;
+  
+}
+
+
+
+
+.CS4 {
+  .PocketBKG{
+    display: block;
+    width: 100%;
+    height: 100%;
+    content:'';
+    background-image: url(/images/CSimages/HotPocket.jpg);
+    background-position: center;
+    background-size: cover;
+    
+  
+  }
+
+  }
+  .PocketHover{
+    display: none;
+    width: 100%;
+ max-height: 40rem;
+ aspect-ratio: 1;
+  background-color: $Black;
+  text-align: center;
+  a{
+    display: block;
+    text-decoration: none;
+    color:$lightest;
+    width: 100%;
+    height: 100%;
+    .linkText{
+      height: 100%;
+      width: 100%;
+      
+      H2{
+      padding-top: 30%;
+        font-family: $AcuminWide;
+        font-size: 21pt;
+        font-weight: 700
+      }
+      H3{
+        font-family: $AcuminWide;
+        font-weight: 300;
+        font-size: 16pt;
+      }
+    }
+  }
+
+
+  background-blend-mode: multiply;
+  position: relative;
+  top:0;
+  right: auto;
+  color:$lightest;
+  }
+
+.PocketBKG:hover + .PocketHover, .PocketHover:hover{
+  display: block;
+  
+}
+
+.PocketBKG:hover{
+  display: none;
+}
+
+
+
+/////WD40
+/// 
+/// 
+.QualiaBKG{
+  display: block;
+  width: 100%;
+  height: 100%;
+  content:'';
+
+  background-position: center;
+  background-size: cover;
+  
+
+}
+
+.QualiaHover{
+  display: none;
+  width: 100%;
+max-height: 40rem;
+aspect-ratio: 1;
+background-color: $Black;
+text-align: center;
+a{
+  display: block;
+  text-decoration: none;
+  color:$lightest;
+  width: 100%;
+  height: 100%;
+  .linkText{
+    height: 100%;
+    width: 100%;
+    
+    H2{
+    padding-top: 20%;
+      font-family: $AcuminWide;
+      font-size: 21pt;
+      font-weight: 700
+    }
+    H3{
+      font-family: $AcuminWide;
+      font-weight: 300;
+      font-size: 16pt;
+    }
+  }
+}
+
+
+background-blend-mode: multiply;
+position: relative;
+top:0;
+right: auto;
+color:$lightest;
+}
+.QualiaBKG:hover + .QualiaHover, .QualiaHover:hover{
+  display: block;
+  
+}
+
+.QualiaBKG:hover{
+  display: none;
+}
+/////WD40
+/// 
+/// 
+.ElephantBKG{
+  display: block;
+  width: 100%;
+  height: 100%;
+  content:'';
+
+  background-position: center;
+  background-size: cover;
+  
+
+}
+
+.ElephantHover{
+  display: none;
+  width: 100%;
+max-height: 40rem;
+aspect-ratio: 1;
+background-color: $Black;
+text-align: center;
+a{
+  display: block;
+  text-decoration: none;
+  color:$lightest;
+  width: 100%;
+  height: 100%;
+  .linkText{
+    height: 100%;
+    width: 100%;
+    
+    H2{
+    padding-top: 30%;
+      font-family: $AcuminWide;
+      font-size: 21pt;
+      font-weight: 700
+    }
+    H3{
+      font-family: $AcuminWide;
+      font-weight: 300;
+      font-size: 16pt;
+    }
+  }
+}
+
+
+background-blend-mode: multiply;
+position: relative;
+top:0;
+right: auto;
+color:$lightest;
+}
+.ElephantBKG:hover + .ElephantHover, .ElephantHover:hover{
+  display: block;
+  
+}
+
+.ElephantBKG:hover{
+  display: none;
+}
+/////WD40
+/// 
+/// 
+.WDBKG{
+  display: block;
+  width: 100%;
+  height: 100%;
+  content:'';
+  background-image: url(/WD-40/stylesheets/images/MagMock.jpg);
+  background-position: center;
+  background-size: cover;
+  
+
+}
+
+.WDHover{
+  display: none;
+  width: 100%;
+max-height: 40rem;
+aspect-ratio: 1;
+background-color: $Black;
+text-align: center;
+a{
+  display: block;
+  text-decoration: none;
+  color:$lightest;
+  width: 100%;
+  height: 100%;
+  .linkText{
+    height: 100%;
+    width: 100%;
+    
+    H2{
+    padding-top: 30%;
+      font-family: $AcuminWide;
+      font-size: 21pt;
+      font-weight: 700
+    }
+    H3{
+      font-family: $AcuminWide;
+      font-weight: 300;
+      font-size: 16pt;
+    }
+  }
+}
+
+
+background-blend-mode: multiply;
+position: relative;
+top:0;
+right: auto;
+color:$lightest;
+}
+.WDBKG:hover + .WDHover, .WDHover:hover{
+  display: block;
+  
+}
+
+.WDBKG:hover{
+  display: none;
+}
+
+
+////Classics//
+.ClassBKG{
+  display: block;
+  width: 100%;
+  height: 100%;
+  content:'';
+  background-image: url(/Classics/stylesheets/images/CoverDuo.jpg);
+  background-position: center;
+  background-size: cover;
+  
+
+}
+
+.ClassHover{
+  display: none;
+  width: 100%;
+max-height: 40rem;
+aspect-ratio: 1;
+background-color: $Black;
+text-align: center;
+a{
+  display: block;
+  text-decoration: none;
+  color:$lightest;
+  width: 100%;
+  height: 100%;
+  .linkText{
+    height: 100%;
+    width: 100%;
+    
+    H2{
+    padding-top: 20%;
+      font-family: $AcuminWide;
+      font-size: 21pt;
+      font-weight: 700
+    }
+    H3{
+      font-family: $AcuminWide;
+      font-weight: 300;
+      font-size: 16pt;
+    }
+  }
+}
+
+
+background-blend-mode: multiply;
+position: relative;
+top:0;
+right: auto;
+color:$lightest;
+}
+.ClassBKG:hover + .ClassHover, .ClassHover:hover{
+  display: block;
+  
+}
+
+.ClassBKG:hover{
+  display: none;
+}
+
+/////Sonora
+/// 
+/// 
+.SonoraBKG{
+  display: block;
+  width: 100%;
+  height: 100%;
+  content:'';
+
+  background-position: center;
+  background-size: cover;
+  
+
+}
+
+.SonoraHover{
+  display: none;
+  width: 100%;
+max-height: 40rem;
+aspect-ratio: 1;
+background-color: $Black;
+text-align: center;
+a{
+  display: block;
+  text-decoration: none;
+  color:$lightest;
+  width: 100%;
+  height: 100%;
+  .linkText{
+    height: 100%;
+    width: 100%;
+    
+    H2{
+    padding-top: 30%;
+      font-family: $AcuminWide;
+      font-size: 21pt;
+      font-weight: 700
+    }
+    H3{
+      font-family: $AcuminWide;
+      font-weight: 300;
+      font-size: 16pt;
+    }
+  }
+}
+
+
+background-blend-mode: multiply;
+position: relative;
+top:0;
+right: auto;
+color:$lightest;
+}
+.SonoraBKG:hover + .SonoraHover, .SonoraHover:hover{
+  display: block;
+  
+}
+
+.SonoraBKG:hover{
+  display: none;
+}
+
+////Poster
+/// 
+/// 
+.PostBKG{
+  display: block;
+  width: 100%;
+  height: 100%;
+  content:'';
+
+  background-position: center;
+  background-size: cover;
+  
+
+}
+
+.PostHover{
+  display: none;
+  width: 100%;
+max-height: 40rem;
+aspect-ratio: 1;
+background-color: $Black;
+text-align: center;
+a{
+  display: block;
+  text-decoration: none;
+  color:$lightest;
+  width: 100%;
+  height: 100%;
+  .linkText{
+    height: 100%;
+    width: 100%;
+    
+    H2{
+    padding-top: 30%;
+      font-family: $AcuminWide;
+      font-size: 21pt;
+      font-weight: 700
+    }
+    H3{
+      font-family: $AcuminWide;
+      font-weight: 300;
+      font-size: 16pt;
+    }
+  }
+}
+
+
+background-blend-mode: multiply;
+position: relative;
+top:0;
+right: auto;
+color:$lightest;
+}
+.PostBKG:hover + .PostHover, .PostHover:hover{
+  display: block;
+  
+}
+
+.PostBKG:hover{
+  display: none;
+}
+
+
+
+
+
+//MetGala//
+
+.MetBKG{
+  display: block;
+  width: 100%;
+  height: 100%;
+  content:'';
+
+  background-position: center;
+  background-size: cover;
+  
+
+}
+
+.MetHover{
+  display: none;
+  width: 100%;
+max-height: 40rem;
+aspect-ratio: 1;
+background-color: $Black;
+text-align: center;
+a{
+  display: block;
+  text-decoration: none;
+  color:$lightest;
+  width: 100%;
+  height: 100%;
+  .linkText{
+    height: 100%;
+    width: 100%;
+    
+    H2{
+    padding-top: 30%;
+      font-family: $AcuminWide;
+      font-size: 21pt;
+      font-weight: 700
+    }
+    H3{
+      font-family: $AcuminWide;
+      font-weight: 300;
+      font-size: 16pt;
+    }
+  }
+}
+
+
+
+background-blend-mode: multiply;
+position: relative;
+top:0;
+right: auto;
+color:$lightest;
+}
+.MetBKG:hover + .MetHover, .MetHover:hover{
+  display: block;
+  
+}
+
+.MetBKG:hover{
+  display: none;
+}
+
+
+
+
+
+
+
+
+////footer////
+footer{
+  @include flexbox();
+  justify-content: center;
+  margin-bottom: 2%;
+  margin-top: 2%;
+  
+  background-color: $lightest;
+  
+
+  
+  img{
+    width: 30%;
+    height: 70%;
+  }
+  .footerInfo{
+    width: 80%;
+   text-align: center;
+   display: flex;
+   flex-direction: row;
+   align-items: center;
+   justify-content: space-around;
+   margin-bottom: 2%;
+    H1{
+      font-family: $AcuminWide;
+      font-size: 18pt;
+      font-weight: 500;
+      color:$red;
+      display: inline;
+
+    }
+    H2{
+      font-family: $AcuminWide;
+      font-size: 16pt;
+      font-weight: 300;
+      color:$Black;
+      display: inline;
+    }
+    .FooterLinks{
+      width: 15%;
+      height: auto;
+      @include flexbox();
+      a{
+       width: 20%;
+        img{
+          width: 100%;
+        }
+      }
+      a:hover{
+        width: 22%; 
+       }
+    }
+  }
+}
+
+
+
+///galleryPanel///
+#galleryPanel{
+ 
+  background-color: #BE1E2D;
+  width: 90%;
+  right: -100%;
+  height: 0%;
+  position: absolute;
+  top:2%;
+
+  z-index: 10000;
+  overflow: hidden;
+  
+}
+.GalleryTitle{
+  width: 100%;
+  height: 10%;
+  margin-top: 2%;
+  margin-left: 2%;
+  display: flex;
+  
+  ///gallery title//
+  H1{
+    font-family: $AcuminWide;
+    font-size: 42pt;
+    font-weight: 500;
+    color:$lightest;
+  }
+
+
+  ///close button gallery//
+  .close {
+    position: absolute;
+    right: 2rem;
+    top: 2rem;
+    width: 2rem;
+    height: 2rem;
+    opacity: 0.7;
+    :hover {
+      opacity: 1;
+    }
+  }
+  .close:hover {
+    opacity: 1;
+  }
+  .close:before, .close:after {
+    position: absolute;
+    left: 1rem;
+    content: ' ';
+    height: 2rem;
+    width: 0.125rem;
+    background-color: $lightest;
+  }
+  .close:hover:before, .close:hover:after {
+    width: 0.3125rem;
+  }
+  
+
+  .close:before {
+    transform: rotate(45deg);
+  }
+  .close:after {
+    transform: rotate(-45deg);
+  }
+}
+
+///close button gallery//
+.closeABT {
+  position: absolute;
+  right: 2rem;
+  top: 2rem;
+  width: 2rem;
+  height: 2rem;
+  opacity: 0.7;
+  :hover {
+    opacity: 1;
+  }
+}
+.closeABT:hover {
+  opacity: 1;
+}
+.closeABT:before, .closeABT:after {
+  position: absolute;
+  left: 1rem;
+  content: ' ';
+  height: 2rem;
+  width: 0.125rem;
+  background-color: $lightest;
+}
+.closeABT:hover:before, .closeABT:hover:after {
+  width: 0.3125rem;
+}
+
+
+.closeABT:before {
+  transform: rotate(45deg);
+}
+.closeABT:after {
+  transform: rotate(-45deg);
+}
+
+
+///gallery images///
+.galleryWrapper{
+  @include flexbox();
+  justify-content: center;
+  width: 100%;
+  height: 90%;
+  
+  align-content: flex-start;
+  overflow-y: scroll;
+}
+.GalBlock{
+  min-width: 31%;
+  width: 45%;
+  min-height: 8%;
+  aspect-ratio: 1;
+  // margin: 1% 1% 1% 1%;
+ 
+  background-color: grey;
+a{
+  width: 100%;
+  height: 100%;
+}
+}
+
+
+
+
+///AboutPage///
+#aboutPanel{
+  background-color: #BE1E2D;
+  width: 90%;
+  right: -100%;
+  height: 0%;
+  position: absolute;
+  top:2%;
+ 
+  z-index: 10000;
+  overflow-x: hidden;
+  overflow-y: scroll;
+  .aboutWrapper{
+    width: 90%;
+    height: 100%;
+    position: absolute;
+    left:5%;
+    top:5%;
+    .aboutTitle{
+      H1{
+        font-family: $AcuminWide;
+        font-weight: 700;
+        color:$lightest;
+        font-size: 48pt;
+      }
+      margin-left:1.5% ;
+      margin-bottom: 1%;
+    }
+    .aboutInfoWrapper{
+      a{
+        text-decoration: none;
+      }
+      width: 100%;
+      height: auto;
+      @include flexbox();
+      .photo{
+        width: 30%;
+     
+        margin-right:3% ;
+       aspect-ratio: 1;
+        
+       
+        @include flexbox();
+        flex-direction: column;
+        .Headshot{
+          width: 90%;
+          aspect-ratio: 1/1.2;
+          background-image: url(/images/about.jpg);
+          background-position: center;
+          background-size: 100%;
+          opacity: 90%;
+        }
+        .Resume{
+          
+          height: 10%;
+          text-align: center;
+          background-color: $lightest;
+          width: 90%;
+          H2{
+            margin-top: 2%;
+            font-family: $AcuminWide;
+            font-size: 21pt;
+            font-weight: 700;
+            color:$Black;
+            line-height: 28pt;
+          }
+        }
+        .Resume:hover{
+          
+          background-color: $Black;
+          H2{
+            color:$lightest;
+          }
+        }
+      }
+      .aboutText{
+        
+        width: 60%;
+        height: 30%;
+        margin-bottom: 7%;
+        H2{
+          font-family: $AcuminWide;
+          font-size: 21pt;
+          font-weight: 700;
+          color:$lightest;
+          line-height: 28pt;
+
+        }
+        p{
+          font-family: $AcuminWide;
+          font-weight: 400;
+          font-size: 16pt;
+          line-height: 19pt;
+          color:$lightest;
+        }
+      }
+      .Skills,.Honors,.Experiences{
+        width: 30%;
+        height: 30%;
+        margin-bottom: 5%;
+        ul{
+          margin-top: 2%;
+        }
+        H2{
+          font-family: $AcuminWide;
+          font-size: 21pt;
+          font-weight: 700;
+          color:$lightest;
+          line-height: 28pt;
+        }
+        p{
+          font-family: $AcuminWide;
+          font-weight: 400;
+          font-size: 12pt;
+          line-height: 19pt;
+          color:$lightest;
+        }
+      }
+     
+    }
+    .contactInfoAbout{
+      @include flexbox();
+      H2{
+        font-family: $AcuminWide;
+          font-size: 16pt;
+          font-weight: 700;
+          color:$lightest;
+          line-height: 28pt;
+      }
+      p{
+        font-family: $AcuminWide;
+        font-weight: 400;
+        font-size: 15pt;
+        line-height: 19pt;
+        color:$lightest;
+      }
+      div{
+        width: 25%;
+        @include flexbox();
+      }
+      .PhoneNum{
+        width: 20%;
+        vertical-align: baseline;
+      }
+      .Email{
+        width: 33%;
+        @include flexbox();
+      }
+      .Social{
+        a{
+          width: 25%;
+          margin-bottom: 10%;
+          margin-top: -2%;
+        }
+        a:hover{
+          width: 28%;
+        }
+        .Behance{
+          width: 50%;
+          
+        }
+       
+      }
+    }
+  }
+  
+
+  
+}
+.Name{
+  display: none;
+  width: 100%;
+  min-height: 20%;
+  height: auto;
+  position: absolute;
+  bottom:0;
+  .M{
+    display: inline-block;
+   
+  
+    
+    border-top: 10pt solid $red;
+    text-align: center;
+  }
+  H1{
+    font-family: $AcuminWide;
+    font-size: 75pt;
+    color:$Black;
+    font-weight: 700;
+  }
+  .Vid{
+    display: inline-block;
+    H2{
+      font-family: $AcuminWide;
+      font-size: 12pt;
+      color: $red;
+    }
+  }
+ 
+}
+}
+@media (min-width:1025px){
+  .mobileNav,.mNavBody, .mGalleryPanel, .mAboutPanel{
+    display: none;
+  }
+}
+@media only screen and (max-width: 1210px) {
+  .nav{
+  li{
+    font-size: 15pt;
+  }}
+}
+@media only screen and (min-width: 1210px) {
+  .nav{
+  li{
+    font-size: 21pt;
+  }}
+}
+
+
+
+
+
+
+//end media query 1025px
+@media (min-width:1340px) {
+  .Name{
+    display: none;
+    width: 100%;
+    min-height: 20%;
+    height: auto;
+    position: absolute;
+    bottom:0;
+    .M{
+      display: inline-block;
+     
+    
+      
+      border-top: 10pt solid $red;
+      text-align: center;
+    }
+    H1{
+      font-family: $AcuminWide;
+      font-size: 110pt;
+      color:$Black;
+      font-weight: 700;
+    }
+    .Vid{
+      display: inline-block;
+      H2{
+        font-family: $AcuminWide;
+        font-size: 12pt;
+        color: $red;
+      }
+    }
+   
+  }
+}
+
+
+
+
+@media (max-width:480px)  { /* smartphones, Android phones, landscape iPhone */ }
+@media (max-width:600px)  { /* portrait tablets, portrait iPad, e-readers (Nook/Kindle), landscape 800x480 phones (Android) */ }
+@media (max-width:801px)  { /* tablet, landscape iPad, lo-res laptops ands desktops */ }

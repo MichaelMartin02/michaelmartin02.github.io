@@ -1,0 +1,2299 @@
+a {
+  text-decoration: none;
+}
+
+video {
+  outline: 0px;
+}
+
+/*General for all */
+@media (min-width: 0px) {
+  * {
+    cursor: none;
+  }
+  *::-webkit-scrollbar-track {
+    border: 1px solid black;
+    background-color: #FFFBEA;
+  }
+  *::-webkit-scrollbar {
+    width: 10px;
+    background-color: #FFFBEA;
+  }
+  *::-webkit-scrollbar-thumb {
+    background-color: #000000;
+  }
+  html {
+    height: 100%;
+  }
+  body {
+    font-size: 100%;
+    background-color: #FFFBEA;
+    overflow-x: hidden;
+    height: 100%;
+  }
+  .scrolli {
+    position: absolute;
+    top: 90%;
+    left: 1300%;
+  }
+  .scrolli span {
+    display: block;
+    width: 20px;
+    height: 20px;
+    border-bottom: 1px solid #E63A48;
+    border-right: 1px solid #E63A48;
+    transform: rotate(45deg);
+    margin: -10px;
+    animation: animate 2s infinite;
+  }
+  .scrolli span:nth-child(2) {
+    animation-delay: -0.2s;
+  }
+  .scrolli span:nth-child(3) {
+    animation-delay: -0.4s;
+  }
+  @keyframes animate {
+    0% {
+      opacity: 0;
+      transform: rotate(45deg) translate(-20px, -20px);
+    }
+    50% {
+      opacity: 1;
+    }
+    100% {
+      opacity: 0;
+      transform: rotate(45deg) translate(20px, 20px);
+    }
+  }
+  /****cursor***/
+  .cursor {
+    position: fixed;
+    height: 2rem;
+    background: #E63A48;
+    margin: -0.625rem 0 0 -0.625rem;
+    border-radius: 50%;
+    -webkit-user-select: none;
+       -moz-user-select: none;
+            user-select: none;
+    pointer-events: none;
+    z-index: 1000000000000000000000;
+    mix-blend-mode: difference;
+  }
+  .mNavOn {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    flex: 1;
+    position: absolute;
+    width: 100%;
+    min-width: 100%;
+    top: 0%;
+    right: 0%;
+    z-index: 1000;
+    height: 100%;
+    position: fixed;
+  }
+  .mNavOn .BTNWrapper {
+    width: 5%;
+    max-height: 10%;
+    position: absolute;
+    top: 5%;
+    right: 5%;
+    aspect-ratio: 1;
+  }
+  .mobileNav {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    flex: 1;
+    position: fixed;
+    width: 7%;
+    min-width: 5%;
+    top: 5%;
+    right: 5%;
+    z-index: 1000000;
+    aspect-ratio: 1/2;
+  }
+  .mobileNav .BTNWrapper {
+    width: 100%;
+    max-height: 100%;
+    position: absolute;
+    top: 5%;
+    right: 5%;
+    aspect-ratio: 1;
+    min-width: 10%;
+  }
+  .backWrapper {
+    width: 5%;
+    max-height: 10%;
+    aspect-ratio: 1;
+    position: absolute;
+    top: 5%;
+    left: 5%;
+    display: none;
+    z-index: 100000000;
+  }
+  .backWrapper .Bline {
+    width: 60%;
+    height: 10%;
+    background: #000000;
+    margin: 5% 0 5% 0;
+    border-radius: 10%;
+  }
+  .backWrapper .Bline:nth-child(1) {
+    transform: rotate(-45deg) translate(15%, 15%);
+  }
+  .backWrapper .Bline:nth-child(2) {
+    transform: rotate(45deg) translate(30%, 90%);
+  }
+  .line {
+    width: 100%;
+    height: 10%;
+    margin: 5% 0 5% 0;
+    background: #000000;
+    border-radius: 10%;
+    transition: all 300ms cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  }
+  .lineon:nth-child(1) {
+    height: 15%;
+    transform: rotate(45deg) translate(20%, 30%);
+  }
+  .lineon:nth-child(2) {
+    visibility: hidden;
+  }
+  .lineon:nth-child(3) {
+    height: 15%;
+    transform: rotate(-45deg) translate(20%, -50%);
+  }
+  .mNavBody {
+    display: none;
+  }
+  .mNavBody .GalleryMobileBTN H2, .mNavBody .AboutMobileBTN H2 {
+    font-family: "acumin-pro-wide", sans-serif;
+    font-size: 15pt;
+  }
+  .on {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+    background-color: #E63A48;
+    background-blend-mode: overlay;
+    text-align: center;
+  }
+  .on H2 {
+    font-family: "acumin-pro-wide", sans-serif;
+    font-size: 75pt;
+  }
+  .Mred {
+    color: #FFFBEA;
+  }
+  .mlist H2 {
+    line-height: 30pt;
+  }
+  .mPhone, .mMail, .mMedia {
+    line-height: 20pt;
+  }
+  .mMedia {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .mMedia a {
+    display: block;
+  }
+  .mGalleryPanel {
+    display: none;
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 15%;
+    right: 0;
+    z-index: 10000;
+    background-color: #E63A48;
+    overflow: scroll;
+  }
+  .mGalleryPanel .mGalleryTitle H2 {
+    font-family: "acumin-pro-wide", sans-serif;
+    color: #000000;
+    font-size: 21pt;
+  }
+  .mGalleryPanel .mGalleryWrapper {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+  }
+  .mGalleryPanel .mGalleryWrapper .mGalBox {
+    width: 100%;
+    aspect-ratio: 1;
+    background-color: grey;
+    margin-bottom: 5%;
+    background-size: cover;
+    background-position: center;
+  }
+  .mAboutPanel {
+    display: none;
+    width: 100%;
+    height: 90%;
+    position: fixed;
+    top: 10%;
+    right: 0;
+    z-index: 10000;
+    background-color: #E63A48;
+    overflow-y: scroll;
+  }
+  .mAboutPanel .mAboutTitle {
+    width: 100%;
+    text-align: center;
+    margin-bottom: 5%;
+  }
+  .mAboutPanel H2 {
+    font-family: "acumin-pro-wide", sans-serif;
+    color: #000000;
+    font-size: 21pt;
+  }
+  .mAboutPanel .mAboutWrapper {
+    width: 90%;
+    margin: auto;
+  }
+  .mAboutPanel .mAboutWrapper p {
+    font-family: "acumin-pro-wide", sans-serif;
+    font-size: 8pt;
+    line-height: 13pt;
+    font-weight: 400;
+    color: #FFFBEA;
+  }
+  .leftBar {
+    width: 10%;
+    position: absolute;
+    height: 100%;
+    z-index: 100;
+  }
+  .NavLogo {
+    display: none;
+    width: 20%;
+    position: fixed;
+    top: 3%;
+    left: 4%;
+    z-index: 1000;
+  }
+  .NavLogo:hover {
+    width: 12%;
+  }
+  header {
+    position: relative;
+    background-color: #FFFBEA;
+    height: 100%;
+  }
+  .OpenVideo {
+    display: none;
+    width: 100%;
+    height: 100%;
+  }
+  .OpenVideo .Vid {
+    width: 40%;
+    height: 60%;
+    position: absolute;
+    left: 30%;
+    top: 20%;
+  }
+  #EnterBTN {
+    display: none;
+    flex-direction: column;
+    position: relative;
+    width: 40%;
+    aspect-ratio: 1;
+    left: 28%;
+    top: 14%;
+    background-color: #FFFBEA;
+    border: none;
+    z-index: 100;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+  }
+  #EnterBTN .ClickMe {
+    background-color: #FFFBEA;
+    width: 100%;
+    text-align: center;
+    height: 30%;
+  }
+  #EnterBTN .ClickMe h1 {
+    margin-top: 7%;
+    font-family: "acumin-pro-wide", sans-serif;
+    font-size: 16pt;
+    color: #000000;
+  }
+  #EnterBTN h1:hover {
+    font-size: 24pt;
+    color: #E63A48;
+  }
+  .Name {
+    display: none;
+    width: 100%;
+    min-height: 5%;
+    height: auto;
+    position: absolute;
+    bottom: 0;
+  }
+  .Name .M {
+    display: inline-block;
+    border-top: 5pt solid #E63A48;
+    text-align: center;
+  }
+  .Name H1 {
+    font-family: "acumin-pro-wide", sans-serif;
+    font-size: 20pt;
+    color: #000000;
+    font-weight: 700;
+  }
+  .Name .Vid {
+    display: inline-block;
+  }
+  .Name .Vid H2 {
+    font-family: "acumin-pro-wide", sans-serif;
+    font-size: 12pt;
+    color: #E63A48;
+  }
+  .Name .Vid:hover H2 {
+    color: #000000;
+  }
+  .nav {
+    display: none;
+  }
+  main {
+    height: auto;
+    display: none;
+    position: relative;
+    top: 10pt;
+  }
+  .CSBlock {
+    background-color: #FFFBEA;
+    width: 90%;
+    height: 20%;
+  }
+  .CS1, .CS2, .CS4, .CS5, .CS6, .CS7, .CS9, .CS10 {
+    width: 90%;
+    max-height: 40rem;
+    aspect-ratio: 1;
+  }
+  .CS1, .CS4, .CS6, .CS9 {
+    margin-right: 0%;
+  }
+  .CS3, .CS8 {
+    width: 90%;
+    max-height: 40rem;
+    aspect-ratio: 1;
+  }
+  .CSBKG {
+    display: block;
+    width: 100%;
+    height: 100%;
+    content: "";
+    background-position: center;
+    background-size: cover;
+  }
+  .CSHOVER {
+    display: none;
+    width: 40%;
+    max-height: 40rem;
+    aspect-ratio: 1;
+    background-color: #000000;
+    text-align: center;
+    background-blend-mode: multiply;
+    position: relative;
+    top: 0;
+    right: auto;
+    color: #FFFBEA;
+  }
+  .CSHOVER a {
+    display: block;
+    text-decoration: none;
+    color: #FFFBEA;
+    width: 100%;
+    height: 100%;
+  }
+  .CSHOVER a .linkText {
+    height: 100%;
+    width: 100%;
+  }
+  .CSHOVER a .linkText H2 {
+    padding-top: 30%;
+    font-family: "acumin-pro-wide", sans-serif;
+    font-size: 21pt;
+    font-weight: 700;
+  }
+  .CSHOVER a .linkText H3 {
+    font-family: "acumin-pro-wide", sans-serif;
+    font-weight: 300;
+    font-size: 16pt;
+  }
+  .QualiaBKG {
+    background-image: url(/Qualia/stylesheets/images/Int/Martin_Michael_Int_Website_Mockup_Cropped.jpg);
+  }
+  .ElephantBKG {
+    background-image: url(/Elephant/stylesheets/images/MMock1.jpg);
+  }
+  .WDBKG {
+    background-image: url(/WD-40/stylesheets/images/MagMock.jpg);
+  }
+  .ClassBKG {
+    background-image: url(/Classics/stylesheets/images/CoverDuo.jpg);
+  }
+  .SonoraBKG {
+    background-image: url(/Sonora/stylesheets/images/LogoSign.jpg);
+  }
+  .PostBKG {
+    background-image: url(/Posters/stylesheets/images/CompMock2.jpg);
+  }
+  .MetBKG {
+    background-image: url(/MetGala/stylesheets/images/FrontBack.jpg);
+  }
+  .CS1 .MasidaBKG {
+    display: block;
+    width: 100%;
+    height: 100%;
+    content: "";
+    background-image: url(/images/CSimages/Masida.jpg);
+    background-position: center;
+    background-size: cover;
+  }
+  .MasidaHover {
+    display: none;
+    width: 40%;
+    max-height: 40rem;
+    aspect-ratio: 1;
+    background-color: #000000;
+    text-align: center;
+    background-blend-mode: multiply;
+    position: absolute;
+    top: 0;
+    right: auto;
+    color: #FFFBEA;
+  }
+  .MasidaHover a {
+    display: block;
+    text-decoration: none;
+    color: #FFFBEA;
+    width: 100%;
+    height: 100%;
+  }
+  .MasidaHover a .linkText {
+    height: 100%;
+    width: 100%;
+  }
+  .MasidaHover a .linkText H2 {
+    padding-top: 30%;
+    font-family: "acumin-pro-wide", sans-serif;
+    font-size: 21pt;
+    font-weight: 700;
+  }
+  .MasidaHover a .linkText H3 {
+    font-family: "acumin-pro-wide", sans-serif;
+    font-weight: 300;
+    font-size: 16pt;
+  }
+  .CS2 .VegetareBKG {
+    display: block;
+    width: 100%;
+    height: 100%;
+    content: "";
+    background-image: url(/images/CSimages/Vegetare.jpg);
+    background-position: center;
+    background-size: cover;
+  }
+  .VegetareHover {
+    display: none;
+    width: 40%;
+    max-height: 40rem;
+    aspect-ratio: 1;
+    background-color: #000000;
+    text-align: center;
+    background-blend-mode: multiply;
+    position: absolute;
+    top: 0;
+    right: auto;
+    color: #FFFBEA;
+  }
+  .VegetareHover a {
+    display: block;
+    text-decoration: none;
+    color: #FFFBEA;
+    width: 100%;
+    height: 100%;
+  }
+  .VegetareHover a .linkText {
+    height: 100%;
+    width: 100%;
+  }
+  .VegetareHover a .linkText H2 {
+    padding-top: 30%;
+    font-family: "acumin-pro-wide", sans-serif;
+    font-size: 21pt;
+    font-weight: 700;
+  }
+  .VegetareHover a .linkText H3 {
+    font-family: "acumin-pro-wide", sans-serif;
+    font-weight: 300;
+    font-size: 16pt;
+  }
+  .CS4 .PocketBKG {
+    display: block;
+    width: 100%;
+    height: 100%;
+    content: "";
+    background-image: url(/images/CSimages/HotPocket.jpg);
+    background-position: center;
+    background-size: cover;
+  }
+  .PocketHover {
+    display: none;
+    width: 40%;
+    max-height: 40rem;
+    aspect-ratio: 1;
+    background-color: #000000;
+    text-align: center;
+    background-blend-mode: multiply;
+    position: relative;
+    top: 0;
+    right: auto;
+    color: #FFFBEA;
+  }
+  .PocketHover a {
+    display: block;
+    text-decoration: none;
+    color: #FFFBEA;
+    width: 100%;
+    height: 100%;
+  }
+  .PocketHover a .linkText {
+    height: 100%;
+    width: 100%;
+  }
+  .PocketHover a .linkText H2 {
+    padding-top: 30%;
+    font-family: "acumin-pro-wide", sans-serif;
+    font-size: 21pt;
+    font-weight: 700;
+  }
+  .PocketHover a .linkText H3 {
+    font-family: "acumin-pro-wide", sans-serif;
+    font-weight: 300;
+    font-size: 16pt;
+  }
+  .CSWrapper {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    top: 1%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-content: flex-start;
+    justify-content: center;
+  }
+  .MasidaBKG a, .VegetareBKG a, .CSBKG a {
+    display: block;
+    width: 100%;
+    height: 100%;
+  }
+  .MasidaBKG:hover + .MasidaHover, .MasidaHover:hover {
+    display: none;
+  }
+  .VegetareBKG:hover + .VegetareHover, .VegetareHover:hover {
+    display: none;
+  }
+  .HeadLogo {
+    position: absolute;
+    right: 22%;
+    width: 50%;
+    max-height: 50%;
+    top: 30%;
+    display: none;
+    aspect-ratio: 1;
+    z-index: 1;
+  }
+  #EnterBTN {
+    display: none;
+    width: 50%;
+    aspect-ratio: 1;
+    left: 25%;
+    top: 50%;
+    z-index: 100;
+  }
+  @keyframes idle1 {
+    0% {
+      left: 25%;
+      top: 15em;
+    }
+    50% {
+      left: 30%;
+      top: 12em;
+    }
+    100% {
+      left: 25%;
+      top: 15em;
+    }
+  }
+}
+#galleryPanel, #aboutPanel {
+  background-color: #BE1E2D;
+  width: 90%;
+  right: -100%;
+  height: 0%;
+  position: absolute;
+  top: 2%;
+  z-index: 10000;
+  overflow: hidden;
+}
+
+footer {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  justify-content: center;
+  margin-bottom: 2%;
+  margin-top: 5%;
+  background-color: #FFFBEA;
+}
+footer img {
+  width: 30%;
+  height: 70%;
+}
+footer .Dis {
+  width: 100%;
+  height: auto;
+  text-align: center;
+  padding: 2%;
+}
+footer .Dis H2 {
+  font-family: "acumin-pro-wide", sans-serif;
+  font-size: 6pt;
+  font-weight: 300;
+  color: #000000;
+  display: inline;
+}
+footer .footerInfo {
+  width: 80%;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  margin-bottom: 2%;
+}
+footer .footerInfo H1 {
+  font-family: "acumin-pro-wide", sans-serif;
+  font-size: 9pt;
+  font-weight: 500;
+  color: #E63A48;
+  display: inline;
+}
+footer .footerInfo H2 {
+  font-family: "acumin-pro-wide", sans-serif;
+  font-size: 6pt;
+  font-weight: 300;
+  color: #000000;
+  display: inline;
+}
+footer .footerInfo .FooterLinks {
+  width: 50%;
+  margin-top: 10%;
+  height: auto;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  flex-direction: column;
+  align-items: center;
+}
+footer .footerInfo .FooterLinks a {
+  width: 40%;
+}
+footer .footerInfo .FooterLinks a img {
+  width: 100%;
+}
+footer .footerInfo .FooterLinks a:hover {
+  width: 45%;
+}
+
+.GalBlock {
+  background-size: cover;
+  background-position: center;
+}
+.GalBlock a {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+@media (min-width: 0px) { /* smartphones, portrait iPhone, portrait 480x320 phones (Android) */
+  .Name {
+    display: none;
+    width: 100%;
+    min-height: 5%;
+    height: auto;
+    position: absolute;
+    bottom: 0;
+  }
+  .Name .M {
+    display: inline-block;
+    border-top: 5pt solid #E63A48;
+    text-align: center;
+  }
+  .Name H1 {
+    font-family: "acumin-pro-wide", sans-serif;
+    font-size: 20pt;
+    color: #000000;
+    font-weight: 700;
+  }
+  .Name .Vid {
+    display: inline-block;
+  }
+  .Name .Vid H2 {
+    font-family: "acumin-pro-wide", sans-serif;
+    font-size: 12pt;
+    color: #E63A48;
+  }
+  .sliderWrapper {
+    display: none;
+    position: absolute;
+    left: 0%;
+    top: 0%;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    opacity: 80%;
+  }
+  .sliding-background {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+    width: 300%;
+    height: 100%;
+    animation: slide 50s linear infinite;
+  }
+  .sliding-img {
+    height: 100%;
+    z-index: 0;
+  }
+  @keyframes slide {
+    0% {
+      transform: translate3d(0, 0, 0);
+    }
+    100% {
+      transform: translate3d(-700%, 0, 0);
+    }
+  }
+  .mobileNav {
+    width: 12%;
+    min-width: 5%;
+  }
+  .mobileNav .BTNWrapper {
+    width: 100%;
+    max-height: 100%;
+    position: absolute;
+    top: 5%;
+    right: 5%;
+    aspect-ratio: 1;
+    min-width: 10%;
+  }
+  .mNavOn .BTNWrapper {
+    width: 10%;
+    max-height: 10%;
+    position: absolute;
+    top: 5%;
+    right: 5%;
+    aspect-ratio: 1;
+  }
+  .NavLogo {
+    display: none;
+    width: 20%;
+    position: fixed;
+    top: 3%;
+    left: 1%;
+  }
+  .NavLogo:hover {
+    width: 21%;
+  }
+  footer {
+    margin-top: 10%;
+  }
+  footer .footerInfo {
+    flex-direction: column;
+  }
+  footer .footerInfo div {
+    margin-bottom: 2%;
+  }
+  footer .footerInfo H1 {
+    font-size: 12pt;
+  }
+  footer .footerInfo H2 {
+    font-size: 10pt;
+  }
+  footer .footerInfo .FooterLinks {
+    margin-top: 0%;
+    width: 20%;
+    flex-direction: column;
+    align-items: center;
+  }
+  footer .footerInfo .FooterLinks a {
+    width: 60%;
+  }
+  footer .footerInfo .FooterLinks a:hover {
+    width: 65%;
+  }
+  .mphoto {
+    width: 96%;
+    text-align: center;
+    margin-right: 3%;
+    margin-top: 10%;
+    margin-bottom: 10%;
+    padding: 2%;
+  }
+  .mphoto .mHead {
+    width: 100%;
+    height: 20%;
+    aspect-ratio: 1/1.2;
+    background-image: url(/images/about.jpg);
+    background-position: center;
+    background-size: 100%;
+    opacity: 90%;
+  }
+}
+@media (min-width: 480px) { /* smartphones, Android phones, landscape iPhone */
+  .mGalBox {
+    width: 40%;
+    aspect-ratio: 1;
+    background-color: grey;
+    margin-bottom: 5%;
+  }
+  .NavLogo {
+    display: none;
+    width: 15%;
+    position: fixed;
+    top: 3%;
+    left: 2%;
+  }
+  .NavLogo:hover {
+    width: 21%;
+  }
+  .sliderWrapper {
+    display: none;
+    position: absolute;
+    left: 0%;
+    top: 0%;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    opacity: 80%;
+  }
+  .sliding-background {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+    width: 300%;
+    height: 100%;
+    animation: slide 90s linear infinite;
+  }
+  .sliding-img {
+    height: 100%;
+    z-index: 0;
+  }
+  @keyframes slide {
+    0% {
+      transform: translate3d(0, 0, 0);
+    }
+    100% {
+      transform: translate3d(-400%, 0, 0);
+    }
+  }
+  footer {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    justify-content: center;
+    margin-bottom: 2%;
+    margin-top: 2%;
+    flex-direction: row;
+    background-color: #FFFBEA;
+  }
+  footer img {
+    width: 30%;
+    height: 70%;
+  }
+  footer .Dis H2 {
+    font-family: "acumin-pro-wide", sans-serif;
+    font-size: 16pt;
+    font-weight: 300;
+    color: #000000;
+    display: inline;
+  }
+  footer .footerInfo {
+    width: 80%;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    margin-bottom: 2%;
+  }
+  footer .footerInfo H1 {
+    font-family: "acumin-pro-wide", sans-serif;
+    font-size: 18pt;
+    font-weight: 500;
+    color: #E63A48;
+    display: inline;
+  }
+  footer .footerInfo H2 {
+    font-family: "acumin-pro-wide", sans-serif;
+    font-size: 16pt;
+    font-weight: 300;
+    color: #000000;
+    display: inline;
+  }
+  footer .footerInfo .FooterLinks {
+    width: 10%;
+    height: auto;
+    flex-direction: column;
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+  }
+  footer .footerInfo .FooterLinks a {
+    width: 60%;
+  }
+  footer .footerInfo .FooterLinks a img {
+    width: 80%;
+    margin-bottom: 5%;
+  }
+  footer .footerInfo .FooterLinks a:hover {
+    width: 62%;
+  }
+  .Name {
+    display: none;
+    width: 100%;
+    min-height: 10%;
+    height: auto;
+    position: absolute;
+    bottom: 0;
+  }
+  .Name .M {
+    display: inline-block;
+    border-top: 5pt solid #E63A48;
+    text-align: center;
+  }
+  .Name H1 {
+    font-family: "acumin-pro-wide", sans-serif;
+    font-size: 30pt;
+    color: #000000;
+    font-weight: 700;
+  }
+  .Name .Vid {
+    display: inline-block;
+  }
+  .Name .Vid H2 {
+    font-family: "acumin-pro-wide", sans-serif;
+    font-size: 12pt;
+    color: #E63A48;
+  }
+}
+@media (min-width: 801px) {
+  .mobileNav {
+    width: 7%;
+    min-width: 5%;
+  }
+  .mobileNav .BTNWrapper {
+    width: 100%;
+    max-height: 100%;
+    position: absolute;
+    top: 5%;
+    right: 5%;
+    aspect-ratio: 1;
+    min-width: 10%;
+  }
+  .mNavOn .BTNWrapper {
+    width: 7%;
+    max-height: 10%;
+    position: absolute;
+    top: 5%;
+    right: 5%;
+    aspect-ratio: 1;
+  }
+  .NavLogo {
+    display: none;
+    width: 10%;
+    position: fixed;
+    top: 3%;
+    left: 2%;
+  }
+  .NavLogo:hover {
+    width: 14%;
+  }
+  footer {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    justify-content: center;
+    margin-bottom: 2%;
+    margin-top: 2%;
+    flex-direction: row;
+    background-color: #FFFBEA;
+  }
+  footer img {
+    width: 30%;
+    height: 70%;
+  }
+  footer .footerInfo {
+    width: 80%;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    margin-bottom: 2%;
+  }
+  footer .footerInfo H1 {
+    font-family: "acumin-pro-wide", sans-serif;
+    font-size: 18pt;
+    font-weight: 500;
+    color: #E63A48;
+    display: inline;
+  }
+  footer .footerInfo H2 {
+    font-family: "acumin-pro-wide", sans-serif;
+    font-size: 16pt;
+    font-weight: 300;
+    color: #000000;
+    display: inline;
+  }
+  footer .footerInfo .FooterLinks {
+    width: 20%;
+    height: auto;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+  }
+  footer .footerInfo .FooterLinks a {
+    width: 20%;
+  }
+  footer .footerInfo .FooterLinks a img {
+    width: 80%;
+  }
+  footer .footerInfo .FooterLinks a:hover {
+    width: 22%;
+  }
+  .Name {
+    display: none;
+    width: 100%;
+    min-height: 12%;
+    height: auto;
+    position: absolute;
+    bottom: 0;
+  }
+  .Name .M {
+    display: inline-block;
+    border-top: 8pt solid #E63A48;
+    text-align: center;
+  }
+  .Name H1 {
+    font-family: "acumin-pro-wide", sans-serif;
+    font-size: 50pt;
+    color: #000000;
+    font-weight: 700;
+  }
+  .Name .Vid {
+    display: inline-block;
+  }
+  .Name .Vid H2 {
+    font-family: "acumin-pro-wide", sans-serif;
+    font-size: 12pt;
+    color: #E63A48;
+  }
+}
+@media (min-width: 1025px) {
+  * {
+    cursor: none;
+  }
+  html {
+    height: 100%;
+  }
+  body {
+    font-size: 100%;
+    background-color: #FFFBEA;
+    overflow-x: hidden;
+    height: 100%;
+  }
+  img {
+    max-width: 100%;
+  }
+  /****cursor***/
+  .cursor {
+    position: fixed;
+    width: 2rem;
+    height: 2rem;
+    background: #E63A48;
+    margin: -0.625rem 0 0 -0.625rem;
+    border-radius: 50%;
+    -webkit-user-select: none;
+       -moz-user-select: none;
+            user-select: none;
+    pointer-events: none;
+    z-index: 1000000000000000000000;
+    mix-blend-mode: normal;
+  }
+  .nav {
+    height: 100%;
+    position: fixed;
+    flex-direction: column;
+    top: 0;
+    right: 0;
+    display: none;
+    width: 8%;
+    border-radius: 0 0 0.625rem 0.625rem;
+    overflow: hidden;
+    z-index: 1000;
+  }
+  .nav ul {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    flex-wrap: nowrap;
+    flex-direction: column;
+    text-align: left;
+    position: relative;
+    justify-content: center;
+    color: #E63A48;
+    top: 20%;
+    height: 60%;
+  }
+  .nav ul li {
+    font-family: "acumin-pro-wide", sans-serif;
+    font-weight: 400;
+    text-align: left;
+    height: 70%;
+    rotate: 90deg;
+  }
+  .nav ul li a {
+    color: black;
+    text-decoration: none;
+    top: 45%;
+  }
+  .nav1 {
+    position: relative;
+    padding-left: 0.3em;
+    padding-right: 0.3em;
+    padding-bottom: 0.5em;
+  }
+  .nav1::before {
+    content: "";
+    padding-right: 0.3em;
+    width: 10%;
+    height: 80%;
+    z-index: 1;
+  }
+  .nav1::before {
+    left: 0;
+    top: 0;
+    border-left: 0.3rem solid #E63A48;
+  }
+  .nav1:hover {
+    height: 100%;
+  }
+  .nav1:hover:before {
+    border: none;
+    border-right: 1rem solid #000000;
+    left: 0%;
+    transition: 0.15s ease-in;
+    z-index: 1;
+  }
+  .leftBar {
+    width: 7%;
+    position: absolute;
+    height: 100%;
+    z-index: 100;
+  }
+  .NavLogo {
+    display: none;
+    width: 5%;
+    position: fixed;
+    top: 3%;
+    left: 2%;
+    z-index: 1000;
+  }
+  .NavLogo:hover {
+    width: 6%;
+  }
+  header {
+    position: relative;
+    background-color: #FFFBEA;
+    height: 100%;
+  }
+  .OpenVideo {
+    display: none;
+    width: 100%;
+    height: 100%;
+  }
+  .OpenVideo .Vid {
+    width: 40%;
+    height: 60%;
+    position: absolute;
+    left: 30%;
+    top: 20%;
+  }
+  #EnterBTN {
+    display: none;
+    flex-direction: column;
+    position: relative;
+    width: 40%;
+    aspect-ratio: 1;
+    left: 28%;
+    top: 14%;
+    background-color: #FFFBEA;
+    border: none;
+    z-index: 100;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+  }
+  #EnterBTN .ClickMe {
+    background-color: #FFFBEA;
+    width: 100%;
+    text-align: center;
+    height: 10%;
+  }
+  #EnterBTN .ClickMe h1 {
+    margin-top: 3%;
+    font-family: "acumin-pro-wide", sans-serif;
+    font-size: 21pt;
+    color: #000000;
+  }
+  #EnterBTN h1:hover {
+    font-size: 24pt;
+    color: #E63A48;
+  }
+  .sliderWrapper {
+    display: none;
+    position: absolute;
+    left: 0%;
+    top: 0%;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    opacity: 80%;
+  }
+  .sliding-background {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+    width: 300%;
+    height: 100%;
+    animation: slide 90s linear infinite;
+  }
+  .sliding-img {
+    height: 100%;
+    z-index: 0;
+  }
+  @keyframes slide {
+    0% {
+      transform: translate3d(0, 0, 0);
+    }
+    100% {
+      transform: translate3d(-120%, 0, 0);
+    }
+  }
+  .HeadLogo {
+    position: absolute;
+    right: 35%;
+    width: 30%;
+    max-height: 50%;
+    top: 25%;
+    display: none;
+    aspect-ratio: 1;
+    z-index: 1;
+  }
+  .HeadLogo .Logo {
+    width: 90%;
+    height: 90%;
+  }
+  .HeadLogo .ReelBTN {
+    display: block;
+    width: 30%;
+    margin: auto;
+    margin-top: 10%;
+    text-align: center;
+    background-color: #818181;
+    padding: 2% 10% 2% 10%;
+    border-radius: 2rem;
+  }
+  .HeadLogo .ReelBTN H2 {
+    font-family: "acumin-pro-wide", sans-serif;
+    font-weight: 700;
+    text-decoration: none;
+    color: #000000;
+    font-size: 13pt;
+  }
+  .HeadLogo .ReelBTN:hover {
+    background-color: #E63A48;
+  }
+  .HeadLogo .ReelBTN:hover H2 {
+    color: #FFFBEA;
+  }
+  main {
+    height: auto;
+    display: none;
+    position: relative;
+    top: 10pt;
+  }
+  .CSWrapper {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    top: 1%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    justify-content: center;
+    align-content: flex-start;
+    margin-top: 2%;
+  }
+  .CSBlock {
+    background-color: #FFFBEA;
+    margin-bottom: 0%;
+  }
+  .CS1, .CS2, .CS3, .CS4, .CS5, .CS6, .CS8, .CS7, .CS9, .CS10 {
+    width: 40%;
+    max-height: 40rem;
+    aspect-ratio: 1;
+  }
+  .CS4, .CS1, .CS7, .CS9 {
+    width: 40%;
+  }
+  .CS5 {
+    width: 40%;
+  }
+  .CS3, .CS6 {
+    width: 80%;
+    height: 40rem;
+  }
+  .CS1 .MasidaBKG {
+    display: block;
+    width: 100%;
+    height: 100%;
+    content: "";
+    background-image: url(/images/CSimages/Masida.jpg);
+    background-position: center;
+    background-size: cover;
+  }
+  .MasidaHover {
+    display: none;
+    width: 40%;
+    max-height: 40rem;
+    aspect-ratio: 1;
+    background-color: #000000;
+    text-align: center;
+    background-blend-mode: multiply;
+    position: absolute;
+    top: 0%;
+    right: auto;
+    color: #FFFBEA;
+  }
+  .MasidaHover a {
+    display: block;
+    text-decoration: none;
+    color: #FFFBEA;
+    width: 100%;
+    height: 100%;
+  }
+  .MasidaHover a .linkText {
+    height: 100%;
+    width: 100%;
+  }
+  .MasidaHover a .linkText H2 {
+    padding-top: 30%;
+    font-family: "acumin-pro-wide", sans-serif;
+    font-size: 21pt;
+    font-weight: 700;
+  }
+  .MasidaHover a .linkText H3 {
+    font-family: "acumin-pro-wide", sans-serif;
+    font-weight: 300;
+    font-size: 16pt;
+  }
+  .MasidaBKG:hover + .MasidaHover, .MasidaHover:hover {
+    display: block;
+  }
+  .CS2 .VegetareBKG {
+    display: block;
+    width: 100%;
+    height: 100%;
+    content: "";
+    background-image: url(/images/CSimages/Vegetare.jpg);
+    background-position: center;
+    background-size: cover;
+  }
+  .VegetareHover {
+    display: none;
+    width: 40%;
+    max-height: 40rem;
+    aspect-ratio: 1;
+    background-color: #000000;
+    text-align: center;
+    background-blend-mode: multiply;
+    position: absolute;
+    top: 0%;
+    right: auto;
+    color: #FFFBEA;
+  }
+  .VegetareHover a {
+    display: block;
+    text-decoration: none;
+    color: #FFFBEA;
+    width: 100%;
+    height: 100%;
+  }
+  .VegetareHover a .linkText {
+    height: 100%;
+    width: 100%;
+  }
+  .VegetareHover a .linkText H2 {
+    padding-top: 30%;
+    font-family: "acumin-pro-wide", sans-serif;
+    font-size: 21pt;
+    font-weight: 700;
+  }
+  .VegetareHover a .linkText H3 {
+    font-family: "acumin-pro-wide", sans-serif;
+    font-weight: 300;
+    font-size: 16pt;
+  }
+  .VegetareBKG:hover + .VegetareHover, .VegetareHover:hover {
+    display: block;
+  }
+  .CS4 .PocketBKG {
+    display: block;
+    width: 100%;
+    height: 100%;
+    content: "";
+    background-image: url(/images/CSimages/HotPocket.jpg);
+    background-position: center;
+    background-size: cover;
+  }
+  .PocketHover {
+    display: none;
+    width: 100%;
+    max-height: 40rem;
+    aspect-ratio: 1;
+    background-color: #000000;
+    text-align: center;
+    background-blend-mode: multiply;
+    position: relative;
+    top: 0;
+    right: auto;
+    color: #FFFBEA;
+  }
+  .PocketHover a {
+    display: block;
+    text-decoration: none;
+    color: #FFFBEA;
+    width: 100%;
+    height: 100%;
+  }
+  .PocketHover a .linkText {
+    height: 100%;
+    width: 100%;
+  }
+  .PocketHover a .linkText H2 {
+    padding-top: 30%;
+    font-family: "acumin-pro-wide", sans-serif;
+    font-size: 21pt;
+    font-weight: 700;
+  }
+  .PocketHover a .linkText H3 {
+    font-family: "acumin-pro-wide", sans-serif;
+    font-weight: 300;
+    font-size: 16pt;
+  }
+  .PocketBKG:hover + .PocketHover, .PocketHover:hover {
+    display: block;
+  }
+  .PocketBKG:hover {
+    display: none;
+  }
+  .QualiaBKG {
+    display: block;
+    width: 100%;
+    height: 100%;
+    content: "";
+    background-position: center;
+    background-size: cover;
+  }
+  .QualiaHover {
+    display: none;
+    width: 100%;
+    max-height: 40rem;
+    aspect-ratio: 1;
+    background-color: #000000;
+    text-align: center;
+    background-blend-mode: multiply;
+    position: relative;
+    top: 0;
+    right: auto;
+    color: #FFFBEA;
+  }
+  .QualiaHover a {
+    display: block;
+    text-decoration: none;
+    color: #FFFBEA;
+    width: 100%;
+    height: 100%;
+  }
+  .QualiaHover a .linkText {
+    height: 100%;
+    width: 100%;
+  }
+  .QualiaHover a .linkText H2 {
+    padding-top: 20%;
+    font-family: "acumin-pro-wide", sans-serif;
+    font-size: 21pt;
+    font-weight: 700;
+  }
+  .QualiaHover a .linkText H3 {
+    font-family: "acumin-pro-wide", sans-serif;
+    font-weight: 300;
+    font-size: 16pt;
+  }
+  .QualiaBKG:hover + .QualiaHover, .QualiaHover:hover {
+    display: block;
+  }
+  .QualiaBKG:hover {
+    display: none;
+  }
+  .ElephantBKG {
+    display: block;
+    width: 100%;
+    height: 100%;
+    content: "";
+    background-position: center;
+    background-size: cover;
+  }
+  .ElephantHover {
+    display: none;
+    width: 100%;
+    max-height: 40rem;
+    aspect-ratio: 1;
+    background-color: #000000;
+    text-align: center;
+    background-blend-mode: multiply;
+    position: relative;
+    top: 0;
+    right: auto;
+    color: #FFFBEA;
+  }
+  .ElephantHover a {
+    display: block;
+    text-decoration: none;
+    color: #FFFBEA;
+    width: 100%;
+    height: 100%;
+  }
+  .ElephantHover a .linkText {
+    height: 100%;
+    width: 100%;
+  }
+  .ElephantHover a .linkText H2 {
+    padding-top: 30%;
+    font-family: "acumin-pro-wide", sans-serif;
+    font-size: 21pt;
+    font-weight: 700;
+  }
+  .ElephantHover a .linkText H3 {
+    font-family: "acumin-pro-wide", sans-serif;
+    font-weight: 300;
+    font-size: 16pt;
+  }
+  .ElephantBKG:hover + .ElephantHover, .ElephantHover:hover {
+    display: block;
+  }
+  .ElephantBKG:hover {
+    display: none;
+  }
+  .WDBKG {
+    display: block;
+    width: 100%;
+    height: 100%;
+    content: "";
+    background-image: url(/WD-40/stylesheets/images/MagMock.jpg);
+    background-position: center;
+    background-size: cover;
+  }
+  .WDHover {
+    display: none;
+    width: 100%;
+    max-height: 40rem;
+    aspect-ratio: 1;
+    background-color: #000000;
+    text-align: center;
+    background-blend-mode: multiply;
+    position: relative;
+    top: 0;
+    right: auto;
+    color: #FFFBEA;
+  }
+  .WDHover a {
+    display: block;
+    text-decoration: none;
+    color: #FFFBEA;
+    width: 100%;
+    height: 100%;
+  }
+  .WDHover a .linkText {
+    height: 100%;
+    width: 100%;
+  }
+  .WDHover a .linkText H2 {
+    padding-top: 30%;
+    font-family: "acumin-pro-wide", sans-serif;
+    font-size: 21pt;
+    font-weight: 700;
+  }
+  .WDHover a .linkText H3 {
+    font-family: "acumin-pro-wide", sans-serif;
+    font-weight: 300;
+    font-size: 16pt;
+  }
+  .WDBKG:hover + .WDHover, .WDHover:hover {
+    display: block;
+  }
+  .WDBKG:hover {
+    display: none;
+  }
+  .ClassBKG {
+    display: block;
+    width: 100%;
+    height: 100%;
+    content: "";
+    background-image: url(/Classics/stylesheets/images/CoverDuo.jpg);
+    background-position: center;
+    background-size: cover;
+  }
+  .ClassHover {
+    display: none;
+    width: 100%;
+    max-height: 40rem;
+    aspect-ratio: 1;
+    background-color: #000000;
+    text-align: center;
+    background-blend-mode: multiply;
+    position: relative;
+    top: 0;
+    right: auto;
+    color: #FFFBEA;
+  }
+  .ClassHover a {
+    display: block;
+    text-decoration: none;
+    color: #FFFBEA;
+    width: 100%;
+    height: 100%;
+  }
+  .ClassHover a .linkText {
+    height: 100%;
+    width: 100%;
+  }
+  .ClassHover a .linkText H2 {
+    padding-top: 20%;
+    font-family: "acumin-pro-wide", sans-serif;
+    font-size: 21pt;
+    font-weight: 700;
+  }
+  .ClassHover a .linkText H3 {
+    font-family: "acumin-pro-wide", sans-serif;
+    font-weight: 300;
+    font-size: 16pt;
+  }
+  .ClassBKG:hover + .ClassHover, .ClassHover:hover {
+    display: block;
+  }
+  .ClassBKG:hover {
+    display: none;
+  }
+  .SonoraBKG {
+    display: block;
+    width: 100%;
+    height: 100%;
+    content: "";
+    background-position: center;
+    background-size: cover;
+  }
+  .SonoraHover {
+    display: none;
+    width: 100%;
+    max-height: 40rem;
+    aspect-ratio: 1;
+    background-color: #000000;
+    text-align: center;
+    background-blend-mode: multiply;
+    position: relative;
+    top: 0;
+    right: auto;
+    color: #FFFBEA;
+  }
+  .SonoraHover a {
+    display: block;
+    text-decoration: none;
+    color: #FFFBEA;
+    width: 100%;
+    height: 100%;
+  }
+  .SonoraHover a .linkText {
+    height: 100%;
+    width: 100%;
+  }
+  .SonoraHover a .linkText H2 {
+    padding-top: 30%;
+    font-family: "acumin-pro-wide", sans-serif;
+    font-size: 21pt;
+    font-weight: 700;
+  }
+  .SonoraHover a .linkText H3 {
+    font-family: "acumin-pro-wide", sans-serif;
+    font-weight: 300;
+    font-size: 16pt;
+  }
+  .SonoraBKG:hover + .SonoraHover, .SonoraHover:hover {
+    display: block;
+  }
+  .SonoraBKG:hover {
+    display: none;
+  }
+  .PostBKG {
+    display: block;
+    width: 100%;
+    height: 100%;
+    content: "";
+    background-position: center;
+    background-size: cover;
+  }
+  .PostHover {
+    display: none;
+    width: 100%;
+    max-height: 40rem;
+    aspect-ratio: 1;
+    background-color: #000000;
+    text-align: center;
+    background-blend-mode: multiply;
+    position: relative;
+    top: 0;
+    right: auto;
+    color: #FFFBEA;
+  }
+  .PostHover a {
+    display: block;
+    text-decoration: none;
+    color: #FFFBEA;
+    width: 100%;
+    height: 100%;
+  }
+  .PostHover a .linkText {
+    height: 100%;
+    width: 100%;
+  }
+  .PostHover a .linkText H2 {
+    padding-top: 30%;
+    font-family: "acumin-pro-wide", sans-serif;
+    font-size: 21pt;
+    font-weight: 700;
+  }
+  .PostHover a .linkText H3 {
+    font-family: "acumin-pro-wide", sans-serif;
+    font-weight: 300;
+    font-size: 16pt;
+  }
+  .PostBKG:hover + .PostHover, .PostHover:hover {
+    display: block;
+  }
+  .PostBKG:hover {
+    display: none;
+  }
+  .MetBKG {
+    display: block;
+    width: 100%;
+    height: 100%;
+    content: "";
+    background-position: center;
+    background-size: cover;
+  }
+  .MetHover {
+    display: none;
+    width: 100%;
+    max-height: 40rem;
+    aspect-ratio: 1;
+    background-color: #000000;
+    text-align: center;
+    background-blend-mode: multiply;
+    position: relative;
+    top: 0;
+    right: auto;
+    color: #FFFBEA;
+  }
+  .MetHover a {
+    display: block;
+    text-decoration: none;
+    color: #FFFBEA;
+    width: 100%;
+    height: 100%;
+  }
+  .MetHover a .linkText {
+    height: 100%;
+    width: 100%;
+  }
+  .MetHover a .linkText H2 {
+    padding-top: 30%;
+    font-family: "acumin-pro-wide", sans-serif;
+    font-size: 21pt;
+    font-weight: 700;
+  }
+  .MetHover a .linkText H3 {
+    font-family: "acumin-pro-wide", sans-serif;
+    font-weight: 300;
+    font-size: 16pt;
+  }
+  .MetBKG:hover + .MetHover, .MetHover:hover {
+    display: block;
+  }
+  .MetBKG:hover {
+    display: none;
+  }
+  footer {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    justify-content: center;
+    margin-bottom: 2%;
+    margin-top: 2%;
+    background-color: #FFFBEA;
+  }
+  footer img {
+    width: 30%;
+    height: 70%;
+  }
+  footer .footerInfo {
+    width: 80%;
+    text-align: center;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    margin-bottom: 2%;
+  }
+  footer .footerInfo H1 {
+    font-family: "acumin-pro-wide", sans-serif;
+    font-size: 18pt;
+    font-weight: 500;
+    color: #E63A48;
+    display: inline;
+  }
+  footer .footerInfo H2 {
+    font-family: "acumin-pro-wide", sans-serif;
+    font-size: 16pt;
+    font-weight: 300;
+    color: #000000;
+    display: inline;
+  }
+  footer .footerInfo .FooterLinks {
+    width: 15%;
+    height: auto;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+  }
+  footer .footerInfo .FooterLinks a {
+    width: 20%;
+  }
+  footer .footerInfo .FooterLinks a img {
+    width: 100%;
+  }
+  footer .footerInfo .FooterLinks a:hover {
+    width: 22%;
+  }
+  #galleryPanel {
+    background-color: #BE1E2D;
+    width: 90%;
+    right: -100%;
+    height: 0%;
+    position: absolute;
+    top: 2%;
+    z-index: 10000;
+    overflow: hidden;
+  }
+  .GalleryTitle {
+    width: 100%;
+    height: 10%;
+    margin-top: 2%;
+    margin-left: 2%;
+    display: flex;
+  }
+  .GalleryTitle H1 {
+    font-family: "acumin-pro-wide", sans-serif;
+    font-size: 42pt;
+    font-weight: 500;
+    color: #FFFBEA;
+  }
+  .GalleryTitle .close {
+    position: absolute;
+    right: 2rem;
+    top: 2rem;
+    width: 2rem;
+    height: 2rem;
+    opacity: 0.7;
+  }
+  .GalleryTitle .close :hover {
+    opacity: 1;
+  }
+  .GalleryTitle .close:hover {
+    opacity: 1;
+  }
+  .GalleryTitle .close:before, .GalleryTitle .close:after {
+    position: absolute;
+    left: 1rem;
+    content: " ";
+    height: 2rem;
+    width: 0.125rem;
+    background-color: #FFFBEA;
+  }
+  .GalleryTitle .close:hover:before, .GalleryTitle .close:hover:after {
+    width: 0.3125rem;
+  }
+  .GalleryTitle .close:before {
+    transform: rotate(45deg);
+  }
+  .GalleryTitle .close:after {
+    transform: rotate(-45deg);
+  }
+  .closeABT {
+    position: absolute;
+    right: 2rem;
+    top: 2rem;
+    width: 2rem;
+    height: 2rem;
+    opacity: 0.7;
+  }
+  .closeABT :hover {
+    opacity: 1;
+  }
+  .closeABT:hover {
+    opacity: 1;
+  }
+  .closeABT:before, .closeABT:after {
+    position: absolute;
+    left: 1rem;
+    content: " ";
+    height: 2rem;
+    width: 0.125rem;
+    background-color: #FFFBEA;
+  }
+  .closeABT:hover:before, .closeABT:hover:after {
+    width: 0.3125rem;
+  }
+  .closeABT:before {
+    transform: rotate(45deg);
+  }
+  .closeABT:after {
+    transform: rotate(-45deg);
+  }
+  .galleryWrapper {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    justify-content: center;
+    width: 100%;
+    height: 90%;
+    align-content: flex-start;
+    overflow-y: scroll;
+  }
+  .GalBlock {
+    min-width: 31%;
+    width: 45%;
+    min-height: 8%;
+    aspect-ratio: 1;
+    background-color: grey;
+  }
+  .GalBlock a {
+    width: 100%;
+    height: 100%;
+  }
+  #aboutPanel {
+    background-color: #BE1E2D;
+    width: 90%;
+    right: -100%;
+    height: 0%;
+    position: absolute;
+    top: 2%;
+    z-index: 10000;
+    overflow-x: hidden;
+    overflow-y: scroll;
+  }
+  #aboutPanel .aboutWrapper {
+    width: 90%;
+    height: 100%;
+    position: absolute;
+    left: 5%;
+    top: 5%;
+  }
+  #aboutPanel .aboutWrapper .aboutTitle {
+    margin-left: 1.5%;
+    margin-bottom: 1%;
+  }
+  #aboutPanel .aboutWrapper .aboutTitle H1 {
+    font-family: "acumin-pro-wide", sans-serif;
+    font-weight: 700;
+    color: #FFFBEA;
+    font-size: 48pt;
+  }
+  #aboutPanel .aboutWrapper .aboutInfoWrapper {
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+  }
+  #aboutPanel .aboutWrapper .aboutInfoWrapper a {
+    text-decoration: none;
+  }
+  #aboutPanel .aboutWrapper .aboutInfoWrapper .photo {
+    width: 30%;
+    margin-right: 3%;
+    aspect-ratio: 1;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    flex-direction: column;
+  }
+  #aboutPanel .aboutWrapper .aboutInfoWrapper .photo .Headshot {
+    width: 90%;
+    aspect-ratio: 1/1.2;
+    background-image: url(/images/about.jpg);
+    background-position: center;
+    background-size: 100%;
+    opacity: 90%;
+  }
+  #aboutPanel .aboutWrapper .aboutInfoWrapper .photo .Resume {
+    height: 10%;
+    text-align: center;
+    background-color: #FFFBEA;
+    width: 90%;
+  }
+  #aboutPanel .aboutWrapper .aboutInfoWrapper .photo .Resume H2 {
+    margin-top: 2%;
+    font-family: "acumin-pro-wide", sans-serif;
+    font-size: 21pt;
+    font-weight: 700;
+    color: #000000;
+    line-height: 28pt;
+  }
+  #aboutPanel .aboutWrapper .aboutInfoWrapper .photo .Resume:hover {
+    background-color: #000000;
+  }
+  #aboutPanel .aboutWrapper .aboutInfoWrapper .photo .Resume:hover H2 {
+    color: #FFFBEA;
+  }
+  #aboutPanel .aboutWrapper .aboutInfoWrapper .aboutText {
+    width: 60%;
+    height: 30%;
+    margin-bottom: 7%;
+  }
+  #aboutPanel .aboutWrapper .aboutInfoWrapper .aboutText H2 {
+    font-family: "acumin-pro-wide", sans-serif;
+    font-size: 21pt;
+    font-weight: 700;
+    color: #FFFBEA;
+    line-height: 28pt;
+  }
+  #aboutPanel .aboutWrapper .aboutInfoWrapper .aboutText p {
+    font-family: "acumin-pro-wide", sans-serif;
+    font-weight: 400;
+    font-size: 16pt;
+    line-height: 19pt;
+    color: #FFFBEA;
+  }
+  #aboutPanel .aboutWrapper .aboutInfoWrapper .Skills, #aboutPanel .aboutWrapper .aboutInfoWrapper .Honors, #aboutPanel .aboutWrapper .aboutInfoWrapper .Experiences {
+    width: 30%;
+    height: 30%;
+    margin-bottom: 5%;
+  }
+  #aboutPanel .aboutWrapper .aboutInfoWrapper .Skills ul, #aboutPanel .aboutWrapper .aboutInfoWrapper .Honors ul, #aboutPanel .aboutWrapper .aboutInfoWrapper .Experiences ul {
+    margin-top: 2%;
+  }
+  #aboutPanel .aboutWrapper .aboutInfoWrapper .Skills H2, #aboutPanel .aboutWrapper .aboutInfoWrapper .Honors H2, #aboutPanel .aboutWrapper .aboutInfoWrapper .Experiences H2 {
+    font-family: "acumin-pro-wide", sans-serif;
+    font-size: 21pt;
+    font-weight: 700;
+    color: #FFFBEA;
+    line-height: 28pt;
+  }
+  #aboutPanel .aboutWrapper .aboutInfoWrapper .Skills p, #aboutPanel .aboutWrapper .aboutInfoWrapper .Honors p, #aboutPanel .aboutWrapper .aboutInfoWrapper .Experiences p {
+    font-family: "acumin-pro-wide", sans-serif;
+    font-weight: 400;
+    font-size: 12pt;
+    line-height: 19pt;
+    color: #FFFBEA;
+  }
+  #aboutPanel .aboutWrapper .contactInfoAbout {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+  }
+  #aboutPanel .aboutWrapper .contactInfoAbout H2 {
+    font-family: "acumin-pro-wide", sans-serif;
+    font-size: 16pt;
+    font-weight: 700;
+    color: #FFFBEA;
+    line-height: 28pt;
+  }
+  #aboutPanel .aboutWrapper .contactInfoAbout p {
+    font-family: "acumin-pro-wide", sans-serif;
+    font-weight: 400;
+    font-size: 15pt;
+    line-height: 19pt;
+    color: #FFFBEA;
+  }
+  #aboutPanel .aboutWrapper .contactInfoAbout div {
+    width: 25%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+  }
+  #aboutPanel .aboutWrapper .contactInfoAbout .PhoneNum {
+    width: 20%;
+    vertical-align: baseline;
+  }
+  #aboutPanel .aboutWrapper .contactInfoAbout .Email {
+    width: 33%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+  }
+  #aboutPanel .aboutWrapper .contactInfoAbout .Social a {
+    width: 25%;
+    margin-bottom: 10%;
+    margin-top: -2%;
+  }
+  #aboutPanel .aboutWrapper .contactInfoAbout .Social a:hover {
+    width: 28%;
+  }
+  #aboutPanel .aboutWrapper .contactInfoAbout .Social .Behance {
+    width: 50%;
+  }
+  .Name {
+    display: none;
+    width: 100%;
+    min-height: 20%;
+    height: auto;
+    position: absolute;
+    bottom: 0;
+  }
+  .Name .M {
+    display: inline-block;
+    border-top: 10pt solid #E63A48;
+    text-align: center;
+  }
+  .Name H1 {
+    font-family: "acumin-pro-wide", sans-serif;
+    font-size: 75pt;
+    color: #000000;
+    font-weight: 700;
+  }
+  .Name .Vid {
+    display: inline-block;
+  }
+  .Name .Vid H2 {
+    font-family: "acumin-pro-wide", sans-serif;
+    font-size: 12pt;
+    color: #E63A48;
+  }
+}
+@media (min-width: 1025px) {
+  .mobileNav, .mNavBody, .mGalleryPanel, .mAboutPanel {
+    display: none;
+  }
+}
+@media only screen and (max-width: 1210px) {
+  .nav li {
+    font-size: 15pt;
+  }
+}
+@media only screen and (min-width: 1210px) {
+  .nav li {
+    font-size: 21pt;
+  }
+}
+@media (min-width: 1340px) {
+  .Name {
+    display: none;
+    width: 100%;
+    min-height: 20%;
+    height: auto;
+    position: absolute;
+    bottom: 0;
+  }
+  .Name .M {
+    display: inline-block;
+    border-top: 10pt solid #E63A48;
+    text-align: center;
+  }
+  .Name H1 {
+    font-family: "acumin-pro-wide", sans-serif;
+    font-size: 110pt;
+    color: #000000;
+    font-weight: 700;
+  }
+  .Name .Vid {
+    display: inline-block;
+  }
+  .Name .Vid H2 {
+    font-family: "acumin-pro-wide", sans-serif;
+    font-size: 12pt;
+    color: #E63A48;
+  }
+}
+@media (max-width: 480px) { /* smartphones, Android phones, landscape iPhone */ }
+@media (max-width: 600px) { /* portrait tablets, portrait iPad, e-readers (Nook/Kindle), landscape 800x480 phones (Android) */ }
+@media (max-width: 801px) { /* tablet, landscape iPad, lo-res laptops ands desktops */ }/*# sourceMappingURL=style.css.map */

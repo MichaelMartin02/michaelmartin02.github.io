@@ -1,0 +1,897 @@
+//fonts//
+$fieldsDis: "fields-display", sans-serif;
+$fields: "fields", sans-serif;
+$AcuminWide: "interstate", sans-serif;
+$newAstro: "new-astro", sans-serif;
+$newAstroSoft: "new-astro-soft", sans-serif;
+$AcuminWide:"acumin-pro-wide", sans-serif;
+
+///color scheme////
+$lightest: #f1faee;
+$red: #e63946;
+$lightBlue: #a8dadc;
+$MedBlue: #457b9d;
+$DarkBlue: #1d3557;
+$black: #000000;
+
+$lightest : #FFFBEA;
+$red : #E63A48;
+$Grey : #A8DADC;
+
+$Grey:#818181;
+
+//Flexbox//
+@mixin flexbox {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+.Link{
+  H1{
+    color:$lightest;
+  }
+}
+
+/*General for all */
+
+* {
+  cursor:url(/Cursor.svg), auto;
+  
+  &::-webkit-scrollbar-track
+  {
+    border: 1px solid black;
+    background-color: $lightest;
+  }
+  
+  &::-webkit-scrollbar
+  {
+    width: 10px;
+    background-color: $lightest;
+  }
+  
+  &::-webkit-scrollbar-thumb
+  {
+    background-color: #000000;	
+  }
+}
+html {
+  height: 100%;
+}
+body {
+  font-size: 100%;
+  overflow-x: hidden;
+  height: 100%;
+  background-color: $lightest;
+}
+img {
+  max-width: 100%;
+}
+/****cursor***/
+// .cursor {
+//   position: fixed;
+//   width: 0rem;
+//   height: 2rem;
+//   background: $red;
+//   margin: -10px 0 0 -10px;
+//   border-radius: 50%;
+//   user-select: none;
+//   pointer-events: none;
+//   z-index: 1000000000000000000000;
+//   mix-blend-mode: multiply;
+//   !important;
+
+// }
+
+//leftbar//
+.leftBar {
+  width: 7%;
+  position: absolute;
+  height: 100%;
+  z-index: 100;
+  // background-color: $lightest;
+}
+
+
+
+
+.Blurb {
+  width: 70%;
+  margin: auto;
+  position: relative;
+  margin-top: 5%;
+  p {
+    font-family: $AcuminWide;
+
+    color: $black;
+  }
+}
+.GalWrapper {
+  display: flex;
+  position: relative;
+  width: 90%;
+  margin: auto;
+  margin-top: 2%;
+  height: auto;
+  flex-wrap: wrap;
+  justify-content: center;
+  .Galblock {
+    max-height: 50%;
+
+    margin-bottom: 0.5%;
+
+    background-position: center;
+  
+    transition: all 1s ease-in-out;
+  }
+  .Half {
+    aspect-ratio: 1;
+  }
+
+
+  ///Setting background images, bkg allows for more responsiveness down to 1000px or so//
+  a {
+    display: block;
+text-decoration: none;
+font-family: $AcuminWide;
+font-weight: 700;
+color:$black;
+
+H1{
+  margin-left: 5%;
+  font-size: 7pt;
+  text-align: center;
+  max-height: 10%;
+  -webkit-backdrop-filter: blur(10px);
+  backdrop-filter: blur(2px);
+}
+padding: 2%;
+}
+  
+  .Link{
+    margin-top: 5%;
+    aspect-ratio: 5;
+    // min-height: 15%;
+    
+  }
+
+
+
+}
+.GalTEXT{
+  width: 100%;
+  text-align: center;
+  margin-top: 3%;
+  margin-bottom: 3%;
+  H1{
+    font-family: $AcuminWide;
+    font-size: 28pt;
+    font-weight: 400;
+    color:$black;
+
+  }
+}
+
+.BlockTXT{
+  width: 97%;
+  margin-left:2% ;
+
+H2{
+  font-family: $AcuminWide;
+  font-weight: 700;
+  font-size: 23pt;
+  color:$red;
+  line-height: 26pt;
+
+}
+p{
+  font-family: $AcuminWide;
+  font-weight: 400;
+  color:$black;
+  font-size: 16pt;
+  line-height: 19pt;
+}
+}
+
+@media (min-width: 0px) {
+  .GalTEXT{
+    H1{
+      font-size: 15pt;
+    }
+  }
+  .BlockTXT{
+
+    H2{
+   
+      
+      font-size: 12pt;
+      
+      line-height: 15pt;
+    
+    }
+    p{
+     
+
+      font-size: 7pt;
+      line-height: 9pt;
+    }
+    }
+    
+  //defaults from mobile-up, what happens at smallest sizes
+  .Full {
+    width: 100%;
+    aspect-ratio: 2;
+  }
+  .Half {
+    width: 100%;
+    a {
+      font-weight: 400;
+      font-size: 10pt;
+      H1{
+        margin-left: 5%;
+        
+        text-align: center;
+        padding: 10% 0 10%;
+        max-height: 10%;
+        -webkit-backdrop-filter: blur(10px);
+        backdrop-filter: blur(2px);
+      }
+      padding: 2%;
+      }
+      
+      .Link{
+        margin-top: 5%;
+        aspect-ratio: 5;
+        min-height: 10%;
+        
+  }
+
+
+  }
+
+  .NavLogo {
+    width: 20%;
+    position: fixed;
+
+    top: 3%;
+    left: 4%;
+    z-index: 1000;
+  }
+
+  .NavLogo:hover {
+    width: 32%;
+    
+  }
+
+  header {
+    width: 100%;
+    height: 55%;
+    
+    .parallax::before {
+      content: "";
+      height: 80%;
+      
+      background-size:cover ;
+      background-repeat: no-repeat;
+      position: absolute;
+      background-attachment:scroll;
+      background-position: center;
+      top: -25%;
+      right: 0px;
+      bottom: 0px;
+      left: 0px;
+      opacity: 0.5;
+    }
+    .parallax {
+     
+  
+      
+      .title {
+        position: absolute;
+        justify-content: center;
+        top: 10%;
+        left: 5%;
+        width: 70%;
+        -webkit-backdrop-filter: blur(3px);
+        backdrop-filter: blur(3px);
+        H2 {
+          color: $black;
+          line-height: 12pt;
+          font-family: $AcuminWide;
+          font-weight: 400;
+          font-size:12pt;
+        }
+        H1 {
+          font-family: $AcuminWide;
+          font-size: 16pt;
+          color: $black;
+          line-height: 18pt;
+          font-weight: 700;
+        }   p {
+          font-family: $AcuminWide;
+          color: $black;
+          font-weight: 200;
+          font-size: 7pt;
+          line-height: 10pt;
+         
+        }
+
+      }
+    }
+  }
+
+  .Blurb {
+    width: 70%;
+    margin: auto;
+    position: relative;
+    margin-top: 5%;
+
+    p {
+      font-family: $AcuminWide;
+      color: $black;
+      font-weight: 200;
+      font-size: 7pt;
+      line-height: 10pt;
+    }
+  }
+  footer {
+    @include flexbox();
+
+    justify-content: center;
+    margin-bottom: 2%;
+    margin-top: 2%;
+    background-color: $lightest;
+    .footerInfo {
+      width: 90%;
+      text-align: center;
+      display: flex;
+      flex-direction: column;
+
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: space-around;
+      margin-bottom: 2%;
+      .FooterLinks{
+        width: 20%;
+        height: auto;
+        @include flexbox();
+        flex-direction: column;
+        align-items: center;
+        margin-bottom: 2%;
+        a{
+         width: 100%;
+          img{
+            width: 80%;
+          }
+        }
+      }
+      div {
+        margin: 2% 0 2% 0;
+      }
+
+      H1 {
+        font-family: $AcuminWide;
+        font-size: 9pt;
+        font-weight: 500;
+        color: $red;
+        display: inline;
+      }
+      H2 {
+        font-family: $AcuminWide;
+        font-size: 5pt;
+        font-weight: 300;
+        color: $black;
+        display: inline;
+      }
+      div:last-child {
+        color: $black;
+        font-weight: 300;
+        font-family: $AcuminWide;
+        font-size: 9pt;
+      }
+    }
+  }
+}
+@media (min-width:320px){
+  header {
+    width: 100%;
+    height: 65%;
+    
+    .parallax::before {
+      content: "";
+      height: 80%;
+      
+      background-size:cover ;
+      background-repeat: no-repeat;
+      position: absolute;
+      background-attachment:scroll;
+      background-position: center;
+      top: -18%;
+      right: 0px;
+      bottom: 0px;
+      left: 0px;
+      opacity: 0.5;
+    }
+    .parallax {
+     
+  
+      
+      .title {
+        position: absolute;
+        justify-content: center;
+        top: 20%;
+        left: 5%;
+        width: 70%;
+        -webkit-backdrop-filter: blur(3px);
+        backdrop-filter: blur(3px);
+        H2 {
+          color: $black;
+          line-height: 12pt;
+          font-family: $AcuminWide;
+          font-weight: 400;
+          font-size:12pt;
+        }
+        H1 {
+          font-family: $AcuminWide;
+          font-size: 16pt;
+          color: $black;
+          line-height: 18pt;
+          font-weight: 700;
+        }   p {
+          font-family: $AcuminWide;
+          color: $black;
+          font-weight: 200;
+          font-size: 8pt;
+          line-height: 11pt;
+         
+        }
+
+      }
+    }
+  }
+  footer {
+   
+    .footerInfo {
+      width: 90%;
+      text-align: center;
+      display: flex;
+      flex-direction: column;
+
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: space-around;
+      margin-bottom: 2%;
+      .FooterLinks{
+        width: 90%;
+        height: auto;
+        @include flexbox();
+        flex-direction: row;
+        align-items: center;
+        margin-bottom: 2%;
+        margin-top: 2%;
+        a{
+         width: 10%; 
+          img{
+            width: 100%;
+          }
+        }
+      }
+      div {
+        margin: 2% 0 2% 0;
+      }
+
+      H1 {
+        font-family: $AcuminWide;
+        font-size: 15pt;
+        font-weight: 500;
+        color: $red;
+        display: inline;
+      }
+      H2 {
+        font-family: $AcuminWide;
+        font-size: 12pt;
+        font-weight: 300;
+        color: $black;
+        display: inline;
+      }
+    
+    }
+  .title{
+    
+      p {
+        
+        font-size: 12pt;
+        line-height: 19pt;
+      }
+    
+  }
+}
+.Blurb {
+  width: 70%;
+  margin: auto;
+  position: relative;
+  margin-top: 5%;
+
+  p {
+    font-family: $AcuminWide;
+    color: $black;
+    font-weight: 200;
+    font-size: 12pt;
+    line-height: 19pt;
+  }
+}
+}
+
+@media (min-width: 480px) {
+  .BlockTXT{
+
+    H2{
+
+      font-size: 20pt;
+  
+      line-height: 23pt;
+    
+    }
+    p{
+
+      font-size: 12pt;
+      line-height: 15pt;
+    }
+    }
+    
+ header{
+  height: 62%;
+  .parallax{
+  .title{
+    p{
+     
+      font-size: 12pt;
+      line-height: 15pt;
+    }
+   }
+  }
+ }
+
+ .NavLogo {
+  width: 15%;
+  position: fixed;
+
+  top: 3%;
+  left: 2%;
+  z-index: 1000;
+}
+footer {
+   
+  .footerInfo {
+    width: 90%;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-around;
+    margin-bottom: 2%;
+    .FooterLinks{
+      width: 90%;
+      height: auto;
+      @include flexbox();
+      flex-direction: row;
+      align-items: center;
+      margin-bottom: 2%;
+      a{
+       width: 10%; 
+        img{
+          width: 100%;
+        }
+      }
+    }
+    div {
+      margin: 2% 0 2% 0;
+    }
+
+    H1 {
+      font-family: $AcuminWide;
+      font-size: 18pt;
+      font-weight: 500;
+      color: $red;
+      display: inline;
+    }
+    H2 {
+      font-family: $AcuminWide;
+      font-size: 15pt;
+      font-weight: 300;
+      color: $black;
+      display: inline;
+    }
+  
+  }
+
+}
+}
+@media (min-width: 801px) {
+  .GalTEXT{
+    H1{
+      font-size: 28pt;
+    }
+  }
+  header{
+    height: 60%;
+    .parallax::before{
+      height: 80%;
+    }
+    .parallax{
+      height: 80%;
+      .title{
+        
+          p {
+            font-family: $AcuminWide;
+            font-size: 12pt;
+            line-height: 18pt;
+            color: $black;
+          }
+        
+      }
+    }
+  }
+  .NavLogo {
+    width: 10%;
+    position: fixed;
+
+    top: 3%;
+    left: 2%;
+    z-index: 1000;
+  }
+  .NavLogo:hover {
+    width: 14%;
+    
+  }
+  footer{
+    @include flexbox();
+    justify-content: center;
+    margin-bottom: 2%;
+    margin-top: 2%;
+    
+    background-color: $lightest;
+    
+  
+    
+    img{
+      width: 30%;
+      height: 70%;
+    }
+    .footerInfo{
+      width: 80%;
+     text-align: center;
+     display: flex;
+     flex-direction: row;
+     align-items: center;
+     justify-content: space-around;
+     margin-bottom: 2%;
+      H1{
+        font-family: $AcuminWide;
+        font-size: 18pt;
+        font-weight: 500;
+        color:$red;
+        display: inline;
+  
+      }
+      H2{
+        font-family: $AcuminWide;
+        font-size: 16pt;
+        font-weight: 300;
+        color:$lightest;
+        display: inline;
+      }
+      .FooterLinks{
+        width: 15%;
+        height: auto;
+        @include flexbox();
+        a{
+         width: 20%;
+         
+          img{
+            width: 100%;
+          }
+        }
+      }
+    }
+  }
+  .GalWrapper a H1{
+    padding: 10% 0 10%;
+    font-size: 15pt;
+  }
+
+}
+
+
+
+@media (min-width: 1100px) {
+  .cursor {
+    position: fixed;
+    width: 2rem;
+    height: 2rem;
+    background: $red;
+    margin: -10px 0 0 -10px;
+    border-radius: 50%;
+    user-select: none;
+    pointer-events: none;
+    z-index: 1000000000000000000000;
+    mix-blend-mode: normal;
+  }
+  .BlockTXT{
+
+    H2{
+      font-family: $AcuminWide;
+      font-weight: 700;
+      font-size: 23pt;
+      color:$red;
+      line-height: 26pt;
+    
+    }
+    p{
+      font-family: $AcuminWide;
+      font-weight: 400;
+      color:$black;
+      font-size: 16pt;
+      line-height: 19pt;
+    }
+    }
+    
+  
+  //desktop specific things//
+  .NavLogo {
+    width: 10%;
+    position: fixed;
+
+    top: 3%;
+    left: 2%;
+    z-index: 1000;
+  }
+  .NavLogo:hover {
+    width: 14%;
+    
+  }
+
+  header {
+    width: 100%;
+    height: 100%;
+    .parallax::before {
+      content: "";
+      
+      background-size: cover;
+      background-repeat: no-repeat;
+      position: absolute;
+      background-attachment: fixed;
+      background-position: center;
+      top: 0px;
+      right: 0px;
+      bottom: 0px;
+      left: 0px;
+      opacity: 0.5;
+      height: 100%;
+    }
+    .parallax {
+      min-height: 100%;
+      .title {
+        top: 30%;
+        left: 10%;
+        H2 {
+          color: $black;
+          line-height: 55pt;
+          font-family: $AcuminWide;
+          font-weight: 400;
+          font-size: 32pt;
+        }
+        H1 {
+          font-family: $AcuminWide;
+          font-size: 55pt;
+          color: $black;
+          line-height: 58pt;
+          font-weight: 700;
+        }
+        p {
+          
+          font-size: 18pt;
+          line-height: 37pt;
+          
+        }
+      }
+    }
+  }
+  .Full {
+    width: 91%;
+    aspect-ratio: 2;
+  }
+  .Half {
+    width: 43.25%;
+
+  }
+  .Left {
+    margin-right: 0.5%;
+  }
+
+  .GalWrapper a H1{
+    padding: 10% 0 10%;
+  }
+  footer{
+    @include flexbox();
+    justify-content: center;
+    margin-bottom: 2%;
+    margin-top: 2%;
+    
+    background-color: $lightest;
+    
+  
+    
+    img{
+      width: 30%;
+      height: 70%;
+    }
+    .footerInfo{
+      width: 80%;
+     text-align: center;
+     display: flex;
+     flex-direction: row;
+     align-items: center;
+     justify-content: space-around;
+     margin-bottom: 2%;
+      H1{
+        font-family: $AcuminWide;
+        font-size: 18pt;
+        font-weight: 500;
+        color:$red;
+        display: inline;
+  
+      }
+      H2{
+        font-family: $AcuminWide;
+        font-size: 16pt;
+        font-weight: 300;
+        color:$black;
+        display: inline;
+      }
+      .FooterLinks{
+        width: 15%;
+        height: auto;
+        @include flexbox();
+        a{
+         width: 20%;
+         
+          img{
+            width: 100%;
+          }
+        }
+      }
+    }
+  }
+  .Blurb {
+    width: 70%;
+    margin: auto;
+    position: relative;
+    margin-top: 5%;
+    p {
+      font-family: $AcuminWide;
+      font-size: 18pt;
+      line-height: 37pt;
+      color: $black;
+    }
+  }
+}
+@media (min-width: 1400px) {
+  .NavLogo {
+    width: 5%;
+    position: fixed;
+
+    top: 3%;
+    left: 2%;
+    z-index: 1000;
+  }
+  .NavLogo:hover {
+    width: 6%;
+    
+  }
+  
+}
+
+
