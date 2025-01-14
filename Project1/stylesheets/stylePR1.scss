@@ -1,0 +1,84 @@
+
+
+//parallax image//
+.parallax::before {
+  background-image: url("images/LogoPara.jpg");
+
+}
+$lightest : #FFFBEA;
+.Link{
+  H1{
+    color:$lightest;
+  }
+}
+//Page Specific Sizing//
+.GalWrapper {
+  .Galblock {
+    background-size: 100%;
+  }
+  .Galblock:hover {
+    background-size: 110%;
+  }
+  ///Set Background Images//
+  .Gal1 {
+    background-image: url("images/EnvelopeMock.jpg");
+  }
+  .Gal2 {
+    background-image: url("images/BCardMock.jpg");
+  }
+  .Gal3 {
+    background-image: url("images/letterMock.jpg");
+
+    height: 40%;
+  }
+
+  .Menu1 {
+    background-image: url("images/Menu1.jpg");
+  }
+  .Menu2 {
+    background-image: url("images/Menu2.jpg");
+  }
+  .Menu3 {
+    background-image: url("images/Menu3.jpg");
+  }
+
+  .Gal4 {
+    background-image: url("images/CoffeeBag.jpg");
+
+    background-position: center-bottom;
+    height: 40%;
+  }
+  .Gal5 {
+    background-image: url("images/CoffeeBack.jpg");
+  }
+  .Gal6 {
+    background-image: url("images/CupMock.jpg");
+  }
+  .Gal7 {
+    background-image: url("images/Bottle1.jpg");
+  }
+  .Gal8 {
+    background-image: url("images/Bottle2.jpg");
+  }
+
+  .Gal9 {
+    background-image: url("images/BottleBack.jpg");
+  }
+  .Gal10{
+    background-image: url("/MetGala/stylesheets/images/RecordOnPlayerMock.jpg");
+  }
+  .Gal11{
+    background-image: url("/images/CSimages/Vegetare.jpg");
+   
+  }
+
+ 
+}
+
+
+  
+
+
+
+
+

@@ -1,0 +1,59 @@
+.parallax::before {
+  background-image: url("images/LogoPara.jpg");
+}
+
+.Link H1 {
+  color: #FFFBEA;
+}
+
+.GalWrapper .Galblock {
+  background-size: 100%;
+}
+.GalWrapper .Galblock:hover {
+  background-size: 110%;
+}
+.GalWrapper .Gal1 {
+  background-image: url("images/EnvelopeMock.jpg");
+}
+.GalWrapper .Gal2 {
+  background-image: url("images/BCardMock.jpg");
+}
+.GalWrapper .Gal3 {
+  background-image: url("images/letterMock.jpg");
+  height: 40%;
+}
+.GalWrapper .Menu1 {
+  background-image: url("images/Menu1.jpg");
+}
+.GalWrapper .Menu2 {
+  background-image: url("images/Menu2.jpg");
+}
+.GalWrapper .Menu3 {
+  background-image: url("images/Menu3.jpg");
+}
+.GalWrapper .Gal4 {
+  background-image: url("images/CoffeeBag.jpg");
+  background-position: center-bottom;
+  height: 40%;
+}
+.GalWrapper .Gal5 {
+  background-image: url("images/CoffeeBack.jpg");
+}
+.GalWrapper .Gal6 {
+  background-image: url("images/CupMock.jpg");
+}
+.GalWrapper .Gal7 {
+  background-image: url("images/Bottle1.jpg");
+}
+.GalWrapper .Gal8 {
+  background-image: url("images/Bottle2.jpg");
+}
+.GalWrapper .Gal9 {
+  background-image: url("images/BottleBack.jpg");
+}
+.GalWrapper .Gal10 {
+  background-image: url("/MetGala/stylesheets/images/RecordOnPlayerMock.jpg");
+}
+.GalWrapper .Gal11 {
+  background-image: url("/images/CSimages/Vegetare.jpg");
+}/*# sourceMappingURL=stylePR1.css.map */
