@@ -1,0 +1,55 @@
+.parallax::before {
+  background-image: url("images/Parallax.jpg");
+}
+
+.GalWrapper .Galblock {
+  background-size: 100%;
+}
+.GalWrapper .Galblock:hover {
+  background-size: 110%;
+}
+.GalWrapper .Gal1 {
+  background-image: url("images/PosterMock1.jpg");
+}
+.GalWrapper .Gal2 {
+  background-image: url("images/PosterMock2.jpg");
+}
+.GalWrapper .Gal3 {
+  background-image: url("images/boardMock.jpg");
+  height: 40%;
+}
+.GalWrapper .Gal4 {
+  background-image: url("images/MagMock.jpg");
+  background-position: center-bottom;
+}
+.GalWrapper .Gal5 {
+  background-image: url("images/Parallax.jpg");
+  background-size: 150%;
+}
+.GalWrapper .Gal5:hover {
+  background-size: 160%;
+}
+.GalWrapper .Gal6 {
+  background-image: url("images/Social1Still.jpg");
+}
+.GalWrapper .Gal7 {
+  background-image: url("images/Social2Still.jpg");
+}
+.GalWrapper .Gal8 {
+  background-image: url("images/LawyerFlat.jpg");
+}
+.GalWrapper .Gal9 {
+  background-image: url("images/JunkFlat.jpg");
+}
+.GalWrapper .Gal12 {
+  background-image: url("images/LawyerMock.jpg");
+}
+.GalWrapper .Gal13 {
+  background-image: url("images/JunkMock.jpg");
+}
+.GalWrapper .Gal10 {
+  background-image: url("/Classics/stylesheets/images/YWCoverMock2.jpg");
+}
+.GalWrapper .Gal11 {
+  background-image: url("/Sonora/stylesheets/images/LogoSign.jpg");
+}/*# sourceMappingURL=styleWd40.css.map */

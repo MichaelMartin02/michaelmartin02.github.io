@@ -1,0 +1,78 @@
+//set parallax img
+.parallax::before {
+      
+     
+  background-image: url("images/Parallax.jpg");
+}
+///Page specific block background sizing//
+.GalWrapper {
+
+  .Galblock {
+    background-size: 100%;
+  }
+  .Galblock:hover {
+    background-size: 110%;
+  }
+
+
+///BACKGROUND IMAGE SETTING FOR GAL///
+  .Gal1 {
+    background-image: url("images/PosterMock1.jpg");
+   
+  }
+  .Gal2 {
+    background-image: url("images/PosterMock2.jpg");
+    
+  }
+  .Gal3 {
+    background-image: url("images/boardMock.jpg");
+
+    height: 40%;
+  }
+  .Gal4 {
+    background-image: url("images/MagMock.jpg");
+
+    background-position: center-bottom;
+   
+  }
+  .Gal5 {
+    background-image: url("images/Parallax.jpg");
+    background-size: 150%;
+  }
+  .Gal5:hover{
+    background-size: 160%;
+  }
+  .Gal6 {
+    background-image: url("images/Social1Still.jpg");
+
+  }
+
+  .Gal7 {
+    background-image: url("images/Social2Still.jpg");
+  
+  }
+
+  .Gal8 {
+    background-image: url("images/LawyerFlat.jpg");
+  }
+
+  .Gal9 {
+    background-image: url("images/JunkFlat.jpg");
+  }
+  .Gal12{
+    background-image: url("images/LawyerMock.jpg");
+  }
+  .Gal13{
+    background-image: url("images/JunkMock.jpg");
+  }
+  .Gal10{
+    background-image: url("/Classics/stylesheets/images/YWCoverMock2.jpg");
+  }
+  .Gal11{
+    background-image: url("/Sonora/stylesheets/images/LogoSign.jpg");
+   
+  }
+     
+}
+
+
