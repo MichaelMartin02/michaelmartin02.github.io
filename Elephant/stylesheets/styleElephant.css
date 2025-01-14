@@ -1,0 +1,100 @@
+.parallax::before {
+  background-image: url("images/DMock1.jpg");
+}
+
+.Half {
+  width: 47.25%;
+}
+
+.Full {
+  width: 95%;
+}
+
+.GalWrapper .Galblock {
+  background-size: 100%;
+}
+.GalWrapper .Galblock:hover {
+  background-size: 110%;
+}
+.GalWrapper .Gal0 {
+  background-image: url("images/Still.jpg");
+  background-size: 100%;
+  margin-bottom: 1%;
+}
+.GalWrapper .Gal0:hover {
+  background-size: 105%;
+}
+.GalWrapper .Gal1 {
+  background-image: url("images/DMock3.jpg");
+}
+.GalWrapper .Gal2 {
+  background-image: url("images/DMock4.jpg");
+}
+.GalWrapper .Gal3 {
+  background-image: url("images/DMock2.jpg");
+  height: 40%;
+}
+.GalWrapper .Gal4 {
+  background-image: url("images/DMock1.jpg");
+  background-position: center-bottom;
+}
+.GalWrapper .Gal5 {
+  background-image: url("images/MMock2.jpg");
+}
+.GalWrapper .Gal6 {
+  background-image: url("images/MMock3.jpg");
+}
+.GalWrapper .Gal7 {
+  background-image: url("images/MMock1.jpg");
+}
+.GalWrapper .Gal8 {
+  background-image: url("images/Personas/neil-100.jpg");
+  margin-top: 2%;
+  background-size: 70%;
+  background-repeat: no-repeat;
+}
+.GalWrapper .Gal9 {
+  background-image: url("images/JunkFlat.jpg");
+}
+.GalWrapper .Gal12 {
+  background-image: url("images/LawyerMock.jpg");
+}
+.GalWrapper .Gal13 {
+  background-image: url("images/JunkMock.jpg");
+}
+.GalWrapper .Gal10 {
+  background-image: url("/CoolPocket/stylesheets/images/HotPocketJacket.jpg");
+}
+.GalWrapper .Gal11 {
+  background-image: url("/Classics/stylesheets/images/YWCoverMock2.jpg");
+}
+.GalWrapper .Gal12 {
+  background-image: url("images/Personas/Craig-100.jpg");
+  background-size: 70%;
+  margin-top: 2%;
+  background-repeat: no-repeat;
+}
+.GalWrapper .Gal14 {
+  background-image: url(images/Personas/Asset\ 4-100.jpg);
+  background-size: 70%;
+  margin-top: 2%;
+  background-repeat: no-repeat;
+}
+.GalWrapper .Gal14:hover, .GalWrapper .Gal8:hover, .GalWrapper .Gal12:hover {
+  background-size: 70%;
+}
+.GalWrapper .Gal16 {
+  background-image: url("images/style2-100.jpg");
+}
+.GalWrapper .Gal17 {
+  background-image: url("images/journey.jpg");
+}
+.GalWrapper .Gal18 {
+  background-image: url("images/paper1.jpg");
+}
+.GalWrapper .Gal19 {
+  background-image: url("images/paper2.jpg");
+}
+.GalWrapper .Gal20 {
+  background-image: url("images/wire-100.jpg");
+}/*# sourceMappingURL=styleElephant.css.map */

@@ -1,0 +1,123 @@
+//set parallax img
+.parallax::before {
+      
+     
+  background-image: url("images/DMock1.jpg");
+}
+.Half{
+  width: 47.25%;
+}
+.Full{
+  width: 95%;
+}
+///Page specific block background sizing//
+
+.GalWrapper {
+
+  .Galblock {
+    background-size: 100%;
+  }
+  .Galblock:hover {
+    background-size: 110%;
+  }
+  
+
+///BACKGROUND IMAGE SETTING FOR GAL///
+.Gal0{
+  background-image: url("images/Still.jpg");
+  background-size: 100%;
+  margin-bottom: 1%;
+}
+.Gal0:hover{
+  background-size: 105%;
+}
+  .Gal1 {
+    background-image: url("images/DMock3.jpg");
+   
+  }
+  .Gal2 {
+    background-image: url("images/DMock4.jpg");
+    
+  }
+  .Gal3 {
+    background-image: url("images/DMock2.jpg");
+
+    height: 40%;
+  }
+  .Gal4 {
+    background-image: url("images/DMock1.jpg");
+
+    background-position: center-bottom;
+   
+  }
+  .Gal5 {
+    background-image: url("images/MMock2.jpg");
+  
+  }
+
+  .Gal6 {
+    background-image: url("images/MMock3.jpg");
+
+  }
+
+  .Gal7 {
+    background-image: url("images/MMock1.jpg");
+  }
+
+  .Gal8 {
+    background-image: url("images/Personas/neil-100.jpg");
+    margin-top: 2%;
+    background-size: 70%;
+    background-repeat: no-repeat;
+  }
+
+  .Gal9 {
+    background-image: url("images/JunkFlat.jpg");
+  }
+  .Gal12{
+    background-image: url("images/LawyerMock.jpg");
+  }
+  .Gal13{
+    background-image: url("images/JunkMock.jpg");
+  }
+  .Gal10{
+    background-image: url("/CoolPocket/stylesheets/images/HotPocketJacket.jpg");
+  }
+  .Gal11{
+    background-image: url("/Classics/stylesheets/images/YWCoverMock2.jpg");
+   
+  }
+  .Gal12{
+    background-image: url("images/Personas/Craig-100.jpg");
+    background-size: 70%;
+    margin-top: 2%;
+    background-repeat: no-repeat;
+  }
+  .Gal14{
+    background-image: url(images/Personas/Asset\ 4-100.jpg);
+    background-size: 70%;
+    margin-top: 2%;
+    background-repeat: no-repeat;
+  }
+  .Gal14:hover, .Gal8:hover,.Gal12:hover{
+    background-size: 70%;
+  }
+  .Gal16{
+    background-image: url("images/style2-100.jpg");
+    
+  }
+  .Gal17{
+    background-image: url("images/journey.jpg");
+  }
+  .Gal18{
+    background-image: url("images/paper1.jpg");
+  }
+  .Gal19{
+    background-image: url("images/paper2.jpg");
+  }
+  .Gal20{
+    background-image: url("images/wire-100.jpg");
+  }
+}
+
+
