@@ -1,0 +1,36 @@
+Set default variables and states
+    Event handler for button clicks
+        On click, reset all depressed states; allow operator check to add a depressed state.
+        Get button type and value
+            Is button operator
+                Yes
+                    Is previous value an operator
+                        Yes
+                            Is previous value same operator
+                                If yes,do nothing. If no, change depressed state and current operator var
+                        No
+                            Is previous value decimal
+                                If yes, add 0 to previous value ("5." + comes to "5.0" +)
+                            Is previous value a number
+                                Is there already a calculation "in the queue", i.e (5 + 9 "+" button click)
+                                    If yes, perform the calculation, set result as display and as operator 1 for next calculation, set operator as next o
+                                
+                                
+                                
+                                Add previous number as operator 1, add operator as operation var.
+                    
+                    Is the calculator cleared
+                        Yes - Put 0 as operator 1, depress button, add operator to variable
+                    
+
+            Is button Number
+                Yes
+
+            Is button Equals/calculate
+                Yes
+
+            Is button clear/All clear
+                Yes
+
+            Is button decimal
+                Yes
