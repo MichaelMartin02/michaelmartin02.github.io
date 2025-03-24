@@ -1,0 +1,178 @@
+:root {
+	--beige: #fffbea;
+	--red: #e63a48;
+	--borderThick: 3px;
+	--marginAroundText: 10px 0px;
+	--h1Size: clamp(1.5rem, 1rem + 2vw, 4rem);
+	--h2Size: clamp(1.25rem, 0.9rem + 1.8vw, 3.5rem);
+	--h3Size: clamp(1.125rem, 0.85rem + 1.6vw, 3rem);
+	--h4Size: clamp(1rem, 0.75rem + 1.4vw, 2.5rem);
+	--h5Size: clamp(0.875rem, 0.7rem + 1.2vw, 2rem);
+	--h6Size: clamp(0.75rem, 0.65rem + 1vw, 1.5rem);
+}
+
+/*Add Book Button*/
+#addBookWrapper {
+	position: absolute;
+	bottom: 0;
+	right: 50px;
+
+	padding: 0px;
+	text-align: right;
+	background-color: transparent;
+	transform: translate(10px, 0px);
+}
+#addBookBtn {
+	width: 50px;
+	position: relative;
+	z-index: 12;
+	margin: 0px;
+	background-color: var(--red);
+	border-radius: 50px 0px 0px 0px;
+}
+/*Add Book Form*/
+#addBookFormWrapper form {
+	right: 0;
+	width: 100%;
+	background-color: var(--beige);
+	display: flex;
+	flex-direction: column;
+}
+
+/*Book form minimized*/
+#addBookFormWrapper.minimized,
+#addBookFormWrapper.minimized form {
+	height: 0px;
+	display: none;
+}
+
+/*Book Object styling*/
+.bookWrapper {
+	padding: 20px;
+	margin: 20px 0px;
+	border: var(--borderThick) solid black;
+	position: relative;
+	display: flex;
+	justify-content: center;
+	align-items: flex-start;
+}
+.bookWrapper > div {
+	height: 100%;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+.bookWrapper .bookBackForm {
+	background: var(--beige);
+	position: absolute;
+	top: 0;
+	align-self: anchor-center;
+	height: 100%;
+	padding: 20px;
+	justify-content: flex-start;
+	width: 100%;
+}
+.hidden {
+	visibility: hidden;
+}
+/*EditForm*/
+.editForm {
+	flex-direction: column;
+	width: 100%;
+}
+/* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
+Media queries
+* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * */
+/* Tablets (600px = 37.5rem and up) */
+@media (width >= 37.5rem) {
+	/* Styles for tablets */
+	#addBookWrapper {
+		transform: translate(20px, 0px);
+	}
+	#addBookFormWrapper {
+		width: 100vw;
+		transform: translate(-50px, -93px);
+	}
+	#bookDisplay {
+		display: flex;
+		flex-wrap: wrap;
+		align-items: stretch;
+		justify-content: space-between;
+		align-content: stretch;
+	}
+	.bookWrapper {
+		flex-grow: 1;
+		max-width: 48%;
+		flex-basis: 48%;
+	}
+	.bookFront section:last-of-type {
+		display: flex;
+		flex-direction: row;
+		flex-wrap: wrap;
+		justify-content: space-around;
+	}
+	.bookFront section:last-of-type button {
+		flex-basis: 48%;
+		text-wrap: auto;
+		font-size: var(--h6Size);
+	}
+}
+
+/* Small Laptops (768px = 48rem and up) */
+@media (width >= 48rem) {
+	/* Styles for small laptops */
+	#addBookWrapper {
+		transform: translate(25px, 0px);
+	}
+}
+
+/* Desktops (1024px = 64rem and up) */
+@media (width >= 64rem) {
+	/* Styles for desktops */
+	.bookWrapper {
+		flex-grow: 1;
+		max-width: 30%;
+		flex-basis: 30%;
+	}
+	#addBookWrapper {
+		transform: translate(30px, 0px);
+	}
+	#addBookFormWrapper {
+		position: relative;
+		top: 0;
+		right: 64vw;
+		text-align: right;
+		width: 75%;
+		transform: translate(70vw, 50px);
+		padding: 20px;
+		border: var(--borderThick) solid black;
+		background-color: var(--beige);
+		z-index: 10;
+		height: auto;
+	}
+	#addBookFormWrapper form {
+		right: 0;
+		width: 100%;
+		background-color: var(--beige);
+		display: flex;
+		flex-direction: column;
+	}
+}
+
+/* Large Screens (1440px = 90rem and up) */
+@media (width >= 90rem) {
+	/* Styles for large screens */
+	#addBookWrapper {
+		transform: translate(50px, 5px);
+	}
+	.bookWrapper {
+		flex-grow: 1;
+		max-width: 23%;
+		flex-basis: 23%;
+	}
+}
+
+/* Extra Large Screens (1920px = 120rem and up) */
+@media (width >= 120rem) {
+	/* Styles for ultra-wide screens */
+}

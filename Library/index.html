@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="stylesheet" href="/assets/modern-normalize.css" />
+		<link rel="stylesheet" href="/assets/natural-selectors-parent.css" />
+		<link rel="stylesheet" href="natural-selectors-child.css" />
+		<link rel="stylesheet" href="style.css" />
+		<link rel="stylesheet" href="https://use.typekit.net/glm1olf.css" />
+		<script src="script.js"></script>
+		<title>Library</title>
+	</head>
+	<body>
+		<header>
+			<h1>Library</h1>
+		</header>
+		<main>
+			<div id="filters">
+				<form>
+					<!-- <input
+						type="search"
+						id="search"
+						name="search"
+						placeholder="Search"
+						aria-label="search books"
+					/> -->
+					<select id="genres" aria-label="select Genres">
+						<option value="All">All Genres</option>
+					</select>
+				</form>
+			</div>
+			<div id="bookDisplay"></div>
+			<!--End Book Display-->
+
+			<div id="addBookWrapper" class="mobileOnly">
+				<div id="addBookFormWrapper" class="minimized">
+					<h2>Add New Book</h2>
+					<form id="addNewBookForm">
+						<input
+							id="addTitle"
+							type="text"
+							placeholder="Title"
+							aria-required="true"
+							required
+						/>
+						<input
+							id="addAuthor"
+							type="text"
+							placeholder="Author"
+							aria-required="true"
+							required
+						/>
+						<input
+							id="addGenres"
+							type="text"
+							placeholder="Genres"
+							aria-required="true"
+							required
+						/>
+						<input
+							id="addPageCount"
+							type="number"
+							placeholder="Page Count"
+							aria-required="true"
+							required
+						/>
+						<input
+							id="addImg"
+							type="text"
+							placeholder="Cover Img Url"
+							aria-required="true"
+							required
+						/>
+						<input
+							id="addReadStatus"
+							type="text"
+							placeholder="Read (Y/N)"
+							aria-required="true"
+							required
+						/>
+						<button id="submit" type="submit" aria-label="Submit Edits">
+							Submit
+						</button>
+					</form>
+				</div>
+				<button
+					id="addBookBtn"
+					type="button"
+					aria-label="Add New Book"
+					style="width: 50px; height: 50px"
+				>
+					+
+				</button>
+			</div>
+		</main>
+	</body>
+</html>
